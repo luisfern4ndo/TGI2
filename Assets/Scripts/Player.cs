@@ -74,12 +74,6 @@ public class Player : MonoBehaviour
         if (collision2d.transform.tag == "Hplataforma")
         {
             myTransform.parent = collision2d.transform;
-            isGrounded = true;
-        }
-
-        if (collision2d.transform.tag == "Checkpoint")
-        {
-            isGrounded = true;
         }
 
         if (collision2d.gameObject.CompareTag("Inimigo") || collision2d.gameObject.CompareTag("Laser"))  // MORRENDO HAHAHA
@@ -109,13 +103,10 @@ public class Player : MonoBehaviour
         if (collision2d.transform.tag == "Hplataforma")
         {
             myTransform.parent = null;
-            isGrounded = false;
+           
         }
 
-        if (collision2d.transform.tag == "Checkpoint")
-        {
-            isGrounded = false;
-        }
+   
     }
 
     //pegar keys e lives
