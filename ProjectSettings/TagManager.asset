@@ -16,6 +16,18 @@ TagManager:
   - Laser(1-2)
   - deathArea
   - Hplataforma
+  - blBOOL
+  - blINT
+  - blFLOAT
+  - blSTRING
+  - respBOOL
+  - respINT
+  - respFLOAT
+  - respSTRING
+  - boxINT
+  - boxFLOAT
+  - boxSTRING
+  - boxBOOL
   layers:
   - Default
   - TransparentFX
