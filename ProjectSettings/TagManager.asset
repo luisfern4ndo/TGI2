@@ -28,6 +28,7 @@ TagManager:
   - boxFLOAT
   - boxSTRING
   - boxBOOL
+  - trocarCena
   layers:
   - Default
   - TransparentFX
