@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public bool morto;
     public bool isGrounded = false;
     public Transform myTransform;
+    public respawnPlayer gameRespawnManager;
+
+    public GameObject blood;
 
 
     void Start()
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
         TextLives.text = lives.ToString();
         TextKeys.text = keys.ToString() + " / 5";
         myTransform = transform;
+        gameRespawnManager = FindObjectOfType<respawnPlayer>();
 
     }
 
@@ -57,15 +61,7 @@ public class Player : MonoBehaviour
             rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
         }
 
-        //animação morto
-        if (morto)
-        {
-            GetComponent<Animator>().SetBool("morte", true);
-        }
-        else
-        {
-            GetComponent<Animator>().SetBool("morte", false);
-        }
+        
 
     }
 
@@ -76,20 +72,20 @@ public class Player : MonoBehaviour
             myTransform.parent = collision2d.transform;
         }
 
-        if (collision2d.gameObject.CompareTag("Inimigo") || collision2d.gameObject.CompareTag("Laser"))  // MORRENDO HAHAHA
+        if (collision2d.gameObject.CompareTag("Inimigo"))// MORRENDO HAHAHA
         {
             lives--;
-            morto = true;
+            Instantiate(blood, transform.position, Quaternion.identity);
 
             if (lives < 0)
             {
-                
-                Invoke("RestartGame", 0.1f);
+
+                RestartGame();
             }
             else
             {
-                
-                Invoke("Perdeu", 0.1f);
+
+                Perdeu();
 
             }
         }
@@ -135,15 +131,15 @@ public class Player : MonoBehaviour
         if (collision2d.gameObject.CompareTag("deathArea"))
         {
             lives--;
-            morto = true;
+            Instantiate(blood, transform.position, Quaternion.identity);
 
             if (lives < 0)
             {
-                Invoke("RestartGame", 0.1f);
+                RestartGame();
             }
             else
             {
-                Invoke("Perdeu", 0.1f);
+                Perdeu();
                 
             }
         }
@@ -157,14 +153,13 @@ public class Player : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Inicio");
-        
+        gameRespawnManager.gameOver();
+
     }
 
     public void Perdeu()
     {
-        transform.position = lastCheckpoint.transform.position;
-        morto = false;
+        gameRespawnManager.Respwan();
         TextLives.text = lives.ToString();
         
     }
