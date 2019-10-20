@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PainelM1 : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PainelM1 : MonoBehaviour
     public bool colidPlayer;
     public GameObject objectToDestroy;
     public bool painelM1Ativo;
+    public GameObject runButton;
+    public TMP_InputField textoInput;
+    public string texto;
 
     public Text aperteX;
 
@@ -16,19 +20,30 @@ public class PainelM1 : MonoBehaviour
     void Start()
     {
         aperteX.enabled = false;
+        //runButton = GameObject.FindGameObjectWithTag("runMonitor1");
+        runButton.SetActive(false);
 
     }
 
 
     public void Update()
     {
+            texto = textoInput.text;
+           if (texto.Length > 0)
+            {
+                runButton.SetActive(true);
+        }
+        else
+        {
+            runButton.SetActive(false);
+        }
         
             if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM1Ativo)
             {
                 ativarP1();
                 aperteX.enabled = false;
 
-        }
+            }
 
             else if (!colidPlayer || Input.GetKeyDown(KeyCode.X) && painelM1Ativo)
             {
