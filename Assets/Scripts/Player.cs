@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
     public respawnPlayer gameRespawnManager;
 
     public GameObject blood;
-    public static bool ativado;
+    public bool m1;
+    public bool m2;
+    public bool m3;
 
 
     void Start()
@@ -28,7 +30,9 @@ public class Player : MonoBehaviour
         TextKeys.text = keys.ToString() + " / 5";
         myTransform = transform;
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
-        ativado = true;
+        m1 = true;
+        m2 = true;
+        m3 = true;
 
     }
 
@@ -37,7 +41,7 @@ public class Player : MonoBehaviour
 
         float movimento = Input.GetAxis("Horizontal");
 
-        if (ativado)
+        if (m1 && m2 && m3)
         {
             Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
             rigidBody.velocity = new Vector2(movimento*velocidade, rigidBody.velocity.y);
@@ -49,7 +53,7 @@ public class Player : MonoBehaviour
             {
                 rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
             }
-        }
+        
 
             //rotação do personagem
             if (movimento < 0)
@@ -69,6 +73,7 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetBool("walking", false);
+        }
         }
 
     }

@@ -10,7 +10,11 @@ public class PainelM3 : MonoBehaviour
     public bool colidPlayer;
     public bool painelM3Ativo;
     public string texto;
-    public TMP_InputField textoinput;   
+    public TMP_InputField textoinput;
+    public GameObject Smute;
+    public GameObject CanvasPauseRestart;
+    public GameObject Player;
+
 
     public Text aperteX;
 
@@ -76,21 +80,20 @@ public class PainelM3 : MonoBehaviour
     {
         painelM3.SetActive(true);
         painelM3Ativo = true;
-
-        Pause.ativado = false;
-        Restart.ativado = false;
-        mute.ativado = false;
-        Player.ativado = false;
+        Smute.GetComponent<mute>().m3 = false;
+        CanvasPauseRestart.GetComponent<Pause>().m3 = false;
+        CanvasPauseRestart.GetComponent<Restart>().m3 = false;
+        Player.GetComponent<Player>().m3 = false;
 
     }
     public void P3Continuar()
     {
         painelM3.SetActive(false);
         painelM3Ativo = false;
-        Pause.ativado = true;
-        Restart.ativado = true;
-        mute.ativado = true;
-        Player.ativado = true;
+        Smute.GetComponent<mute>().m3 = true;
+        CanvasPauseRestart.GetComponent<Pause>().m3 = true;
+        CanvasPauseRestart.GetComponent<Restart>().m3 = true;
+        Player.GetComponent<Player>().m3 = true;
 
     }
 

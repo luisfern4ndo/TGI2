@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class mute : MonoBehaviour
 {
-    public static bool ativado;
+    public bool m1;
+    public bool m2;
+    public bool m3;
 
     public bool isMute;
     void Start()
     {
-        ativado = true;
+        m1 = true;
+        m2 = true;
+        m3 = true;
         if(AudioListener.volume == 0)
         {
             isMute = true;
@@ -28,7 +32,7 @@ public class mute : MonoBehaviour
             GetComponent<Animator>().SetBool("Som", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && ativado)
+        if (Input.GetKeyDown(KeyCode.S) && m1 && m2 && m3)
         {
             Mute();
         }

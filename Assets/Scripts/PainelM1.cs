@@ -15,6 +15,9 @@ public class PainelM1 : MonoBehaviour
     public string texto;
 
     public Text aperteX;
+    public GameObject Smute;
+    public GameObject CanvasPauseRestart;
+    public GameObject Player;
 
 
     void Start()
@@ -87,14 +90,22 @@ public class PainelM1 : MonoBehaviour
         {
             painelM1.SetActive(true);
             painelM1Ativo = true;
+        Smute.GetComponent<mute>().m1 = false;
+        CanvasPauseRestart.GetComponent<Pause>().m1 = false;
+        CanvasPauseRestart.GetComponent<Restart>().m1 = false;
+        Player.GetComponent<Player>().m1 = false;
 
     }
         public void P1Continuar()
         {
             painelM1.SetActive(false);
             painelM1Ativo = false;
+        Smute.GetComponent<mute>().m1 = true;
+        CanvasPauseRestart.GetComponent<Pause>().m1 = true;
+        CanvasPauseRestart.GetComponent<Restart>().m1 = true;
+        Player.GetComponent<Player>().m1 = true;
 
-        }
+    }
 
     public void DestroyGameObject()
     {

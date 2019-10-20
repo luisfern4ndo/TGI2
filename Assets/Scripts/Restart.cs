@@ -6,17 +6,21 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
 
-    public static bool ativado;
+    public bool m1;
+    public bool m2;
+    public bool m3;
 
 
     private void Start()
     {
-        ativado = true;
+        m1 = true;
+        m2 = true;
+        m3 = true;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && ativado)
+        if (Input.GetKeyDown(KeyCode.R) && m1 && m2 && m3)
         {
             RestartGame();
         }

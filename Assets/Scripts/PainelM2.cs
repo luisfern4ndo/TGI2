@@ -11,6 +11,9 @@ public class PainelM2 : MonoBehaviour
     public bool painelM2Ativo;
 
     public Text aperteX;
+    public GameObject Smute;
+    public GameObject CanvasPauseRestart;
+    public GameObject Player;
 
 
     void Start()
@@ -62,12 +65,20 @@ public class PainelM2 : MonoBehaviour
     {
         painelM2.SetActive(true);
         painelM2Ativo = true;
+        Smute.GetComponent<mute>().m2 = false;
+        CanvasPauseRestart.GetComponent<Pause>().m2 = false;
+        CanvasPauseRestart.GetComponent<Restart>().m2 = false;
+        Player.GetComponent<Player>().m2 = false;
 
     }
     public void P2Continuar()
     {
         painelM2.SetActive(false);
         painelM2Ativo = false;
+        Smute.GetComponent<mute>().m2 = true;
+        CanvasPauseRestart.GetComponent<Pause>().m2 = true;
+        CanvasPauseRestart.GetComponent<Restart>().m2 = true;
+        Player.GetComponent<Player>().m2 = true;
 
     }
 }
