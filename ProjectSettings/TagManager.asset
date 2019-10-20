@@ -29,6 +29,7 @@ TagManager:
   - boxSTRING
   - boxBOOL
   - trocarCena
+  - runMonitor1
   layers:
   - Default
   - TransparentFX
