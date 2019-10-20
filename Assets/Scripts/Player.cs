@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public respawnPlayer gameRespawnManager;
 
     public GameObject blood;
+    public static bool ativado;
 
 
     void Start()
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         TextKeys.text = keys.ToString() + " / 5";
         myTransform = transform;
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
+        ativado = true;
 
     }
 
@@ -34,34 +36,40 @@ public class Player : MonoBehaviour
     {
 
         float movimento = Input.GetAxis("Horizontal");
-        Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
-        rigidBody.velocity = new Vector2(movimento*velocidade, rigidBody.velocity.y);
 
-        //rotação do personagem
-        if (movimento < 0)
+        if (ativado)
         {
-            GetComponent<SpriteRenderer>().flipX=true; 
-        }else if(movimento > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
+            Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
+            rigidBody.velocity = new Vector2(movimento*velocidade, rigidBody.velocity.y);
+
+        
+
+            //pulo
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
+            }
         }
 
+            //rotação do personagem
+            if (movimento < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (movimento > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
         //animação walking
-        if(movimento <0 || movimento > 0)
+        if (movimento < 0 || movimento > 0)
         {
             GetComponent<Animator>().SetBool("walking", true);
         }
-        else {
+        else
+        {
             GetComponent<Animator>().SetBool("walking", false);
         }
-
-        //pulo
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)  
-        {
-            rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
-        }
-
-        
 
     }
 

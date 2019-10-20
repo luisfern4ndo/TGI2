@@ -6,10 +6,17 @@ public class Pause : MonoBehaviour
 {
    
     public GameObject pauseMenu, pauseButton;
+    public static bool ativado;
+
+    private void Start()
+    {
+        ativado = true;
+    }
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && pauseButton)
+        if (Input.GetKeyDown(KeyCode.P) && pauseButton && ativado)
         {
             Pausar();
         }

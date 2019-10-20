@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class mute : MonoBehaviour
 {
+    public static bool ativado;
 
     public bool isMute;
     void Start()
     {
+        ativado = true;
         if(AudioListener.volume == 0)
         {
             isMute = true;
@@ -24,6 +26,11 @@ public class mute : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetBool("Som", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) && ativado)
+        {
+            Mute();
         }
 
     }    

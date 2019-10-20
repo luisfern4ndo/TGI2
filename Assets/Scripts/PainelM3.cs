@@ -42,6 +42,7 @@ public class PainelM3 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM3Ativo)
         {
+            ativarPlataforma();
             P3Continuar();
 
         }
@@ -76,23 +77,32 @@ public class PainelM3 : MonoBehaviour
         painelM3.SetActive(true);
         painelM3Ativo = true;
 
+        Pause.ativado = false;
+        Restart.ativado = false;
+        mute.ativado = false;
+        Player.ativado = false;
+
     }
     public void P3Continuar()
     {
         painelM3.SetActive(false);
         painelM3Ativo = false;
+        Pause.ativado = true;
+        Restart.ativado = true;
+        mute.ativado = true;
+        Player.ativado = true;
 
     }
 
     
     public void ativarPlataforma()
     {
-        if (texto == "true" || texto == "True") {
+        if (texto == "True") {
             AtivarMoveP.ativar = true;
         }
         else
         {
-            Debug.Log("ERRADO!");
+            AtivarMoveP.ativar = false;
         }
     }
 
