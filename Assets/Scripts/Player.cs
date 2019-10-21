@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+[RequireComponent(typeof(Rigidbody2D))] // obrigatorio player ter rigidbody2d
 public class Player : MonoBehaviour
 {
     public float forcaPulo;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     public bool m1;
     public bool m2;
     public bool m3;
+    Rigidbody2D rb;
 
 
     void Start()
@@ -33,27 +35,37 @@ public class Player : MonoBehaviour
         m1 = true;
         m2 = true;
         m3 = true;
+        rb = GetComponent<Rigidbody2D>();
 
+    }
+
+    void configRB()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+    }
+    void configPadrao()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void Update()
     {
-
-        float movimento = Input.GetAxis("Horizontal");
-
+        
         if (m1 && m2 && m3)
         {
+            configPadrao();
+            float movimento = Input.GetAxis("Horizontal");
             Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
-            rigidBody.velocity = new Vector2(movimento*velocidade, rigidBody.velocity.y);
+            rigidBody.velocity = new Vector2(movimento * velocidade, rigidBody.velocity.y);
 
-        
+
 
             //pulo
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
             }
-        
+
 
             //rotação do personagem
             if (movimento < 0)
@@ -65,15 +77,23 @@ public class Player : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
 
-        //animação walking
-        if (movimento < 0 || movimento > 0)
-        {
-            GetComponent<Animator>().SetBool("walking", true);
+            //animação walking
+            if (movimento < 0 || movimento > 0)
+            {
+                GetComponent<Animator>().SetBool("walking", true);
+            }
+            else
+            {
+                GetComponent<Animator>().SetBool("walking", false);
+            }
+
         }
         else
         {
+
+            configRB();
             GetComponent<Animator>().SetBool("walking", false);
-        }
+
         }
 
     }
