@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))] // obrigatorio player ter rigidbody2d
 public class Player : MonoBehaviour
 {
-    public float forcaPulo;
+    
     public float velocidade;
     public int lives;
     public int keys;
@@ -15,15 +15,22 @@ public class Player : MonoBehaviour
     public Text TextKeys;
     public GameObject lastCheckpoint;
     public bool morto;
-    public bool isGrounded = false;
     public Transform myTransform;
     public respawnPlayer gameRespawnManager;
-
     public GameObject blood;
     public bool m1;
     public bool m2;
     public bool m3;
     Rigidbody2D rb;
+
+    //pulo
+    public Transform groundCheck;
+    public Transform groundCheck2;
+    public bool isGrounded = false;
+    public bool isGrounded2 = false;
+    public LayerMask whatIsGround;
+    public float forcaPulo;
+    
 
 
     void Start()
@@ -50,20 +57,25 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+    
         if (m1 && m2 && m3)
         {
+
             configPadrao();
             float movimento = Input.GetAxis("Horizontal");
             Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
             rigidBody.velocity = new Vector2(movimento * velocidade, rigidBody.velocity.y);
 
 
+            //NovoPulo
+            isGrounded = Physics2D.Linecast(transform.position, groundCheck.position, whatIsGround);
+            isGrounded2 = Physics2D.Linecast(transform.position, groundCheck2.position, whatIsGround);
 
-            //pulo
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.Space) && isGrounded2)
             {
                 rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
+                
             }
 
 

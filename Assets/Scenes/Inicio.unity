@@ -879,6 +879,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Plataforma
       objectReference: {fileID: 0}
+    - target: {fileID: 6190827264640335720, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6190827264640335723, guid: f96aaea4bcc436640bcefd0959a99e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -968,6 +973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190827263566524052, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96aaea4bcc436640bcefd0959a99e09, type: 3}
@@ -1373,7 +1383,7 @@ GameObject:
   - component: {fileID: 230105103}
   - component: {fileID: 230105102}
   - component: {fileID: 230105106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: boxBOOL
   m_TagString: boxBOOL
   m_Icon: {fileID: 0}
@@ -1737,7 +1747,7 @@ GameObject:
   - component: {fileID: 313040106}
   - component: {fileID: 313040105}
   - component: {fileID: 313040109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: boxINT
   m_TagString: boxINT
   m_Icon: {fileID: 0}
@@ -2167,6 +2177,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Plataforma
       objectReference: {fileID: 0}
+    - target: {fileID: 6190827264640335720, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6190827264640335723, guid: f96aaea4bcc436640bcefd0959a99e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2251,6 +2266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VPlataforma
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190827263566524052, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6190827263938692013, guid: f96aaea4bcc436640bcefd0959a99e09, type: 3}
@@ -2442,7 +2462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484917105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2315407, y: 1.9542401, z: -10}
+  m_LocalPosition: {x: -5.081306, y: 1.9542401, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 63475740}
@@ -2641,7 +2661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2315407, y: 1.9542401, z: -10}
+  m_LocalPosition: {x: -5.081306, y: 1.9542401, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3457,7 +3477,7 @@ GameObject:
   - component: {fileID: 742729849}
   - component: {fileID: 742729848}
   - component: {fileID: 742729850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap plataforma
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -10875,6 +10895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint2
       objectReference: {fileID: 0}
+    - target: {fileID: 4226406453809754900, guid: d25a53ca3e75328498808d51bb523abe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4226406453809754897, guid: d25a53ca3e75328498808d51bb523abe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11333,6 +11358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VMovingPlataforma2
       objectReference: {fileID: 0}
+    - target: {fileID: 6190827264640335720, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6190827264640335723, guid: f96aaea4bcc436640bcefd0959a99e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11407,6 +11437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190827263566524052, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96aaea4bcc436640bcefd0959a99e09, type: 3}
@@ -11647,6 +11682,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463d8b66c1dd93145872fcf9b60821a6, type: 3}
+--- !u!1 &1025258112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025258113}
+  m_Layer: 0
+  m_Name: GroundCheck2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1025258113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025258112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0412, y: -0.1077, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 818858365}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1064019586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12742,7 +12807,7 @@ GameObject:
   - component: {fileID: 1157691974}
   - component: {fileID: 1157691973}
   - component: {fileID: 1157691977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: boxFLOAT
   m_TagString: boxFLOAT
   m_Icon: {fileID: 0}
@@ -13335,6 +13400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Checkpoint4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226406453809754900, guid: d25a53ca3e75328498808d51bb523abe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4226406453809754897, guid: d25a53ca3e75328498808d51bb523abe,
         type: 3}
@@ -14306,6 +14376,36 @@ MonoBehaviour:
   m1: 0
   m2: 0
   m3: 0
+--- !u!1 &1648703525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648703526}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648703526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648703525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.058, y: -0.1077, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 818858365}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1650605077
 GameObject:
   m_ObjectHideFlags: 0
@@ -15819,7 +15919,12 @@ PrefabInstance:
     - target: {fileID: 4226406453809754900, guid: d25a53ca3e75328498808d51bb523abe,
         type: 3}
       propertyPath: m_TagString
-      value: Checkpoint
+      value: Plataforma
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226406453809754900, guid: d25a53ca3e75328498808d51bb523abe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4226406453809754897, guid: d25a53ca3e75328498808d51bb523abe,
         type: 3}
@@ -16447,7 +16552,7 @@ GameObject:
   - component: {fileID: 2055513060}
   - component: {fileID: 2055513059}
   - component: {fileID: 2055513063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: boxSTRING
   m_TagString: boxSTRING
   m_Icon: {fileID: 0}
@@ -18203,6 +18308,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HMovingPlataforma
       objectReference: {fileID: 0}
+    - target: {fileID: 6190827264640335720, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6190827264640335723, guid: f96aaea4bcc436640bcefd0959a99e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18257,6 +18367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190827263566524052, guid: f96aaea4bcc436640bcefd0959a99e09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96aaea4bcc436640bcefd0959a99e09, type: 3}
@@ -18550,5 +18665,25 @@ PrefabInstance:
       propertyPath: lives
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8157882830488132904, guid: 7ec1c06aa3e4af646910570f397ce1ac,
+        type: 3}
+      propertyPath: groundCHeck
+      value: 
+      objectReference: {fileID: 1648703526}
+    - target: {fileID: 8157882830488132904, guid: 7ec1c06aa3e4af646910570f397ce1ac,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1648703526}
+    - target: {fileID: 8157882830488132904, guid: 7ec1c06aa3e4af646910570f397ce1ac,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157882830488132904, guid: 7ec1c06aa3e4af646910570f397ce1ac,
+        type: 3}
+      propertyPath: groundCheck2
+      value: 
+      objectReference: {fileID: 1025258113}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec1c06aa3e4af646910570f397ce1ac, type: 3}

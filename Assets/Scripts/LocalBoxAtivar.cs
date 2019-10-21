@@ -59,7 +59,7 @@ public class LocalBoxAtivar : MonoBehaviour
         Destroy(objectToDestroy1);
         Destroy(objectToDestroy2);
         Destroy(objectToDestroy3);
-        Instantiate(liberado);
+       
     }
    
 
