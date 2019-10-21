@@ -18,6 +18,7 @@ public class PainelM1 : MonoBehaviour
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
+    public bool botaoAtivo;
 
 
     void Start()
@@ -25,6 +26,8 @@ public class PainelM1 : MonoBehaviour
         aperteX.enabled = false;
         //runButton = GameObject.FindGameObjectWithTag("runMonitor1");
         runButton.SetActive(false);
+        botaoAtivo = false;
+        
 
     }
 
@@ -35,27 +38,25 @@ public class PainelM1 : MonoBehaviour
            if (texto.Length > 0)
             {
                 runButton.SetActive(true);
+            botaoAtivo = true;
+           
         }
         else
         {
             runButton.SetActive(false);
+            botaoAtivo = false;
         }
         
             if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM1Ativo)
             {
                 ativarP1();
                 aperteX.enabled = false;
+               
 
-            }
-
-            else if (!colidPlayer || Input.GetKeyDown(KeyCode.X) && painelM1Ativo)
-            {
-                P1Continuar();
-                
-            }
+        }
 
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo)
+            if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo && botaoAtivo)
             {
                 P1Continuar();
                 DestroyGameObject();
@@ -94,6 +95,7 @@ public class PainelM1 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().m1 = false;
         CanvasPauseRestart.GetComponent<Restart>().m1 = false;
         Player.GetComponent<Player>().m1 = false;
+        GameObject.Find("nomeHacker").GetComponent<TMP_InputField>().Select();
 
     }
         public void P1Continuar()

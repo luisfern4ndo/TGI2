@@ -37,12 +37,6 @@ public class PainelM3 : MonoBehaviour
 
         }
 
-        else if (!colidPlayer || Input.GetKeyDown(KeyCode.X) && painelM3Ativo)
-        {
-            P3Continuar();
-
-        }
-
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM3Ativo)
         {
@@ -84,6 +78,7 @@ public class PainelM3 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().m3 = false;
         CanvasPauseRestart.GetComponent<Restart>().m3 = false;
         Player.GetComponent<Player>().m3 = false;
+        GameObject.Find("InputMoveBool").GetComponent<TMP_InputField>().Select();
 
     }
     public void P3Continuar()

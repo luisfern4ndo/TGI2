@@ -15,6 +15,7 @@ public class Pause : MonoBehaviour
         m1 = true;
         m2 = true;
         m3 = true;
+       
     }
 
 
