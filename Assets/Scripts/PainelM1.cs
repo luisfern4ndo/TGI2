@@ -12,13 +12,16 @@ public class PainelM1 : MonoBehaviour
     public bool painelM1Ativo;
     public GameObject runButton;
     public TMP_InputField textoInput;
-    public string texto;
+    public string nomePlayer;
 
     public Text aperteX;
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
     public bool botaoAtivo;
+
+    public GameObject ConsoleNomePlayer;
+    public GameObject ConsoleInformativo;
 
 
     void Start()
@@ -34,8 +37,8 @@ public class PainelM1 : MonoBehaviour
 
     public void Update()
     {
-            texto = textoInput.text;
-           if (texto.Length > 0)
+            nomePlayer = textoInput.text;
+           if (nomePlayer.Length > 0)
             {
                 runButton.SetActive(true);
             botaoAtivo = true;
@@ -113,6 +116,10 @@ public class PainelM1 : MonoBehaviour
     {
 
         Destroy(objectToDestroy);
+        ConsoleNomePlayer.GetComponent<TMP_Text>().text = "(" + nomePlayer + ")";
+        ConsoleNomePlayer.SetActive(true);
+        ConsoleInformativo.SetActive(true);
+        
 
 
     }

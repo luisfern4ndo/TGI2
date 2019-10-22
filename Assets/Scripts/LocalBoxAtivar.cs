@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LocalBoxAtivar : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class LocalBoxAtivar : MonoBehaviour
     public GameObject objectToDestroy2;
     public GameObject objectToDestroy3;
 
-    public GameObject liberado;
-
     public bool bBOOLAtivo;
     public bool bINTAtivo;
     public bool bFLOATAtivo;
     public bool bSTRINGAtivo;
+
+    public GameObject ConsoleInformativo;
+    public bool destruido;
 
 
     void Start()
@@ -24,7 +26,7 @@ public class LocalBoxAtivar : MonoBehaviour
     bINTAtivo = false;
     bFLOATAtivo = false;
     bSTRINGAtivo = false;
-   
+    destruido = false;
    
     }
 
@@ -34,7 +36,7 @@ public class LocalBoxAtivar : MonoBehaviour
         if(bFLOATAtivo && bINTAtivo && bSTRINGAtivo && bBOOLAtivo)
         {
             DestroyGameObject();
-            
+            destruido = true;
         }
 
     }
@@ -56,10 +58,13 @@ public class LocalBoxAtivar : MonoBehaviour
 
     public void DestroyGameObject()
     {
-        Destroy(objectToDestroy1);
-        Destroy(objectToDestroy2);
-        Destroy(objectToDestroy3);
-       
+        if (!destruido)
+        {
+            Destroy(objectToDestroy1);
+            Destroy(objectToDestroy2);
+            Destroy(objectToDestroy3);
+            ConsoleInformativo.SetActive(true);
+        }
     }
    
 

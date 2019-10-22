@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DestroyLiberado.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\Scripts\checkpoint.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\DestroyBlood.cs" />
+    <Compile Include="Assets\Scripts\DestroyInformativo.cs" />
     <Compile Include="Assets\Scripts\EnemyHorizontal.cs" />
     <Compile Include="Assets\Scripts\IntAtivar.cs" />
     <Compile Include="Assets\Scripts\LocalBoxAtivar.cs" />
