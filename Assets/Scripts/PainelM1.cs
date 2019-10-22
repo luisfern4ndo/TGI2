@@ -22,6 +22,7 @@ public class PainelM1 : MonoBehaviour
 
     public GameObject ConsoleNomePlayer;
     public GameObject ConsoleInformativo;
+    public bool LaserDestruido;
 
 
     void Start()
@@ -30,7 +31,7 @@ public class PainelM1 : MonoBehaviour
         //runButton = GameObject.FindGameObjectWithTag("runMonitor1");
         runButton.SetActive(false);
         botaoAtivo = false;
-        
+        LaserDestruido = false;
 
     }
 
@@ -114,13 +115,14 @@ public class PainelM1 : MonoBehaviour
 
     public void DestroyGameObject()
     {
-
-        Destroy(objectToDestroy);
         ConsoleNomePlayer.GetComponent<TMP_Text>().text = "(" + nomePlayer + ")";
         ConsoleNomePlayer.SetActive(true);
-        ConsoleInformativo.SetActive(true);
-        
-
+        if (!LaserDestruido)
+        {
+            Destroy(objectToDestroy);
+            LaserDestruido = true;
+            ConsoleInformativo.SetActive(true);
+        }
 
     }
 

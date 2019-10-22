@@ -10389,8 +10389,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278619391
+  m_fontColor: {r: 1, g: 0.55079514, b: 0.023584902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10408,8 +10408,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11293,8 +11293,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278228735
+  m_fontColor: {r: 1, g: 0.58961684, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11312,8 +11312,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18024,8 +18024,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117.53, y: -37.89}
-  m_SizeDelta: {x: 791.62, y: 286.84}
+  m_AnchoredPosition: {x: 117.53, y: -39.53}
+  m_SizeDelta: {x: 791.62, y: 300.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2083291445
 MonoBehaviour:
@@ -19365,7 +19365,37 @@ PrefabInstance:
     - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 4278619391
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.55079514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.023584902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512153715309308306, guid: 2f48e0d697d300148a8018113ebddf89,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2512153715309308308, guid: 2f48e0d697d300148a8018113ebddf89,
         type: 3}
