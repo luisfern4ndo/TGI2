@@ -19,6 +19,8 @@ public class LocalBoxAtivar : MonoBehaviour
     public GameObject ConsoleInformativo;
     public bool destruido;
 
+    public GameObject caixaFLOAT;
+  
 
     void Start()
     {
@@ -46,6 +48,8 @@ public class LocalBoxAtivar : MonoBehaviour
         if (collision.transform.tag == "boxFLOAT")
         {
             bFLOATAtivo = true;
+            caixaFLOAT.GetComponent<Animator>().SetBool("Ativado", true);
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -53,6 +57,7 @@ public class LocalBoxAtivar : MonoBehaviour
         if (collision.transform.tag == "boxFLOAT")
         {
             bFLOATAtivo = false;
+            caixaFLOAT.GetComponent<Animator>().SetBool("Ativado",false);
         }
     }
 

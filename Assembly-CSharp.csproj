@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
+    <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
     <Compile Include="Assets\Scripts\cameraManager.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\DestroyInformativo.cs" />
     <Compile Include="Assets\Scripts\EnemyHorizontal.cs" />
     <Compile Include="Assets\Scripts\IntAtivar.cs" />
+    <Compile Include="Assets\Scripts\LaserM4.cs" />
     <Compile Include="Assets\Scripts\LocalBoxAtivar.cs" />
     <Compile Include="Assets\Scripts\mensagem.cs" />
     <Compile Include="Assets\Scripts\menu.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\PainelM1.cs" />
     <Compile Include="Assets\Scripts\PainelM2.cs" />
     <Compile Include="Assets\Scripts\PainelM3.cs" />
+    <Compile Include="Assets\Scripts\PainelM4.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\popBOOL.cs" />

@@ -5,6 +5,8 @@ using UnityEngine;
 public class StringAtivar : MonoBehaviour
 {
     GameObject floatPai;
+    public GameObject boxString;
+   
     void Start()
     {
         floatPai = gameObject.transform.parent.gameObject;
@@ -21,6 +23,7 @@ public class StringAtivar : MonoBehaviour
         if (collision2d.gameObject.CompareTag("boxSTRING"))
         {
             floatPai.GetComponent<LocalBoxAtivar>().bSTRINGAtivo = true;
+            boxString.GetComponent<Animator>().SetBool("Ativado", true);
         }
 
     }
@@ -30,6 +33,7 @@ public class StringAtivar : MonoBehaviour
         if (collision2d.gameObject.CompareTag("boxSTRING"))
         {
             floatPai.GetComponent<LocalBoxAtivar>().bSTRINGAtivo = false;
+            boxString.GetComponent<Animator>().SetBool("Ativado", true);
         }
     }
 }

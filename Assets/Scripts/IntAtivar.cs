@@ -5,6 +5,8 @@ using UnityEngine;
 public class IntAtivar : MonoBehaviour
 {
     GameObject floatPai;
+    public GameObject boxINT;
+    
     void Start()
     {
         floatPai = gameObject.transform.parent.gameObject;
@@ -20,6 +22,7 @@ public class IntAtivar : MonoBehaviour
         if (collision2d.gameObject.CompareTag("boxINT"))
         {
             floatPai.GetComponent<LocalBoxAtivar>().bINTAtivo = true;
+            boxINT.GetComponent<Animator>().SetBool("Ativado", true);
         }
 
     }
@@ -29,6 +32,7 @@ public class IntAtivar : MonoBehaviour
         if (collision2d.gameObject.CompareTag("boxINT"))
         {
             floatPai.GetComponent<LocalBoxAtivar>().bINTAtivo = false;
+            boxINT.GetComponent<Animator>().SetBool("Ativado", false);
         }
     }
 }
