@@ -17,12 +17,13 @@ public class PainelM3 : MonoBehaviour
 
 
     public Text aperteX;
+    public GameObject ConsoleERRO;
 
 
     void Start()
     {
         aperteX.enabled = false;
-        
+   
     }
 
 
@@ -97,10 +98,18 @@ public class PainelM3 : MonoBehaviour
     {
         if (texto == "True") {
             AtivarMoveP.ativar = true;
+           
+        }
+        else if(texto == "False")
+        {
+            AtivarMoveP.ativar = false;
+    
         }
         else
         {
             AtivarMoveP.ativar = false;
+            ConsoleERRO.SetActive(true);
+           
         }
     }
 

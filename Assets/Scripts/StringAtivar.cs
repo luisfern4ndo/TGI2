@@ -33,7 +33,7 @@ public class StringAtivar : MonoBehaviour
         if (collision2d.gameObject.CompareTag("boxSTRING"))
         {
             floatPai.GetComponent<LocalBoxAtivar>().bSTRINGAtivo = false;
-            boxString.GetComponent<Animator>().SetBool("Ativado", true);
+            boxString.GetComponent<Animator>().SetBool("Ativado", false);
         }
     }
 }

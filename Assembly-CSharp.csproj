@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
     <Compile Include="Assets\Scripts\cameraManager.cs" />
     <Compile Include="Assets\Scripts\checkpoint.cs" />
+    <Compile Include="Assets\Scripts\DesativarInformativo.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\DestroyBlood.cs" />
     <Compile Include="Assets\Scripts\DestroyInformativo.cs" />

@@ -18,6 +18,7 @@ public class PainelM4 : MonoBehaviour
 
 
     public Text aperteX;
+    public GameObject ConsoleERRO;
 
 
     void Start()
@@ -101,10 +102,15 @@ public class PainelM4 : MonoBehaviour
             AtivarMoveP2.ativar2 = true;
             Laser.SetActive(true);
         }
-        else
+        else if (texto == "False")
         {
             AtivarMoveP2.ativar2 = false;
             Laser.SetActive(false);
+
+        }
+        else
+        {
+            ConsoleERRO.SetActive(true);
 
         }
     }
