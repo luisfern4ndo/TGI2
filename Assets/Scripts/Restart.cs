@@ -27,7 +27,7 @@ public class Restart : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene("Inicio");
+        SceneManager.LoadScene("Cena 2 Inicio");
         
     }
 }

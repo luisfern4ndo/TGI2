@@ -99,7 +99,6 @@
     <Compile Include="Assets\Scripts\seguirINT.cs" />
     <Compile Include="Assets\Scripts\seguirSTR.cs" />
     <Compile Include="Assets\Scripts\StringAtivar.cs" />
-    <Compile Include="Assets\Scripts\TrocarCena.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />

@@ -6,7 +6,7 @@ public class menu : MonoBehaviour
 {
     public void chamaCena()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Cena 2 Inicio");
     }
     public void sairJogo()
     {

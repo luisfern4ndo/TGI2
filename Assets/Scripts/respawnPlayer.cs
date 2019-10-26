@@ -39,7 +39,7 @@ public class respawnPlayer : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Inicio");
+        SceneManager.LoadScene("Cena 2 Inicio");
     }
 
 }
