@@ -92,6 +92,8 @@
     <Compile Include="Assets\Scripts\popFLOAT.cs" />
     <Compile Include="Assets\Scripts\popINT.cs" />
     <Compile Include="Assets\Scripts\popSTRING.cs" />
+    <Compile Include="Assets\Scripts\Porta.cs" />
+    <Compile Include="Assets\Scripts\PortaReturn.cs" />
     <Compile Include="Assets\Scripts\respawnPlayer.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\seguirBOOL.cs" />

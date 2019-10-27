@@ -10,7 +10,7 @@ public class respawnPlayer : MonoBehaviour
 
     void Start()
     {
-        gamePlayer = FindObjectOfType<Player>(); //Script player
+        gamePlayer = FindObjectOfType<Player>();
     }
     void Update()
     {
