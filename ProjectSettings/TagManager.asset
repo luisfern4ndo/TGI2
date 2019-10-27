@@ -30,6 +30,8 @@ TagManager:
   - boxBOOL
   - trocarCena
   - runMonitor1
+  - Cd
+  - Cd2
   layers:
   - Default
   - TransparentFX

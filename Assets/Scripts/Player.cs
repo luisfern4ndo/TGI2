@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     public float velocidade;
     public int lives;
     public int keys;
+    public int cd;
+    public GameObject cdConsole;
+    public GameObject cd2Console;
     public Text TextLives;
     public Text TextKeys;
     public GameObject lastCheckpoint;
@@ -36,7 +39,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         TextLives.text = lives.ToString();
-        TextKeys.text = keys.ToString() + " / 5";
+        TextKeys.text = keys.ToString();
+        cd = 0;
         myTransform = transform;
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
         m1 = true;
@@ -117,7 +121,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision2d.gameObject);
             keys++;
-            TextKeys.text = keys.ToString() + " / 5";
+            TextKeys.text = keys.ToString();
         }
 
         if (collision2d.transform.tag == "Hplataforma")
@@ -162,7 +166,18 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision2d)
     {
-       
+
+        if (collision2d.gameObject.CompareTag("Cd"))
+        {
+            cdConsole.SetActive(true);
+            cd++;
+        }
+        if (collision2d.gameObject.CompareTag("Cd2"))
+        {
+            cd2Console.SetActive(true);
+            cd++;
+        }
+
 
         if (collision2d.gameObject.CompareTag("Live"))
         {

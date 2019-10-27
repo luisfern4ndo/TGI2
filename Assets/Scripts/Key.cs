@@ -28,6 +28,7 @@ public class Key : MonoBehaviour
     void configRB()
     {
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb.WakeUp();
     }
 
 }

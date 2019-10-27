@@ -67,8 +67,10 @@
     <Compile Include="Assets\Scripts\AtivarWhileMoveP.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
+    <Compile Include="Assets\Scripts\btM7funcao.cs" />
     <Compile Include="Assets\Scripts\cameraManager.cs" />
     <Compile Include="Assets\Scripts\Cd.cs" />
+    <Compile Include="Assets\Scripts\Cd2.cs" />
     <Compile Include="Assets\Scripts\checkpoint.cs" />
     <Compile Include="Assets\Scripts\DesativarInformativo.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
