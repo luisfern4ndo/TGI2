@@ -68,6 +68,7 @@ public class LocalBoxAtivar : MonoBehaviour
             Destroy(objectToDestroy1);
             Destroy(objectToDestroy2);
             Destroy(objectToDestroy3);
+            ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "Valores atribuidos corretamente, passagem liberada!";
             ConsoleInformativo.SetActive(true);
         }
     }

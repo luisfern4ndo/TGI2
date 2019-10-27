@@ -110,6 +110,7 @@ public class PainelM4 : MonoBehaviour
         }
         else
         {
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! O valor não existe no contexto atual";
             ConsoleERRO.SetActive(true);
 
         }

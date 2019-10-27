@@ -5,7 +5,7 @@ using UnityEngine;
 public class DesativarInformativo : MonoBehaviour
 {
     public float timer = 0.0f;
-    public float waitingTime = 4.0f;
+    public float waitingTime;
    
     void Start()
     {

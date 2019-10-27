@@ -121,6 +121,7 @@ public class PainelM1 : MonoBehaviour
         {
             Destroy(objectToDestroy);
             LaserDestruido = true;
+            ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "O laser foi desativado!";
             ConsoleInformativo.SetActive(true);
         }
 

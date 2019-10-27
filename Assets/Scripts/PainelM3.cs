@@ -108,8 +108,8 @@ public class PainelM3 : MonoBehaviour
         else
         {
             AtivarMoveP.ativar = false;
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! O valor não existe no contexto atual";
             ConsoleERRO.SetActive(true);
-           
         }
     }
 
