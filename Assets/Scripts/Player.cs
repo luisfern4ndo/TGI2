@@ -112,6 +112,14 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision2d)//player colide
     {
+
+        if (collision2d.gameObject.CompareTag("Key"))
+        {
+            Destroy(collision2d.gameObject);
+            keys++;
+            TextKeys.text = keys.ToString() + " / 5";
+        }
+
         if (collision2d.transform.tag == "Hplataforma")
         {
             myTransform.parent = collision2d.transform;
@@ -154,11 +162,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision2d)
     {
-        if (collision2d.gameObject.CompareTag("Key")){
-            Destroy(collision2d.gameObject);
-            keys++;
-            TextKeys.text = keys.ToString() + " / 5";
-        }
+       
 
         if (collision2d.gameObject.CompareTag("Live"))
         {

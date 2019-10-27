@@ -4,18 +4,20 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class PainelM4 : MonoBehaviour
+public class PainelM6 : MonoBehaviour
 {
-    public GameObject painelM4;
+    public GameObject painelM6;
     public bool colidPlayer;
-    public bool painelM4Ativo;
+    public bool painelM6Ativo;
     public string texto;
     public TMP_InputField textoinput;
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
-    public GameObject Laser;
-
+    public GameObject plataforma1;
+    public GameObject plataforma2;
+    public GameObject plataforma3;
+    public GameObject plataforma4;
 
     public Text aperteX;
     public GameObject ConsoleERRO;
@@ -32,18 +34,18 @@ public class PainelM4 : MonoBehaviour
     {
         texto = textoinput.text;
 
-        if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM4Ativo)
+        if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM6Ativo)
         {
-            ativarP4();
+            ativarP6();
             aperteX.enabled = false;
 
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM4Ativo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM6Ativo)
         {
             ativarPlataforma();
-            P4Continuar();
+            P6Continuar();
 
         }
 
@@ -72,21 +74,21 @@ public class PainelM4 : MonoBehaviour
     }
 
 
-    public void ativarP4()
+    public void ativarP6()
     {
-        painelM4.SetActive(true);
-        painelM4Ativo = true;
+        painelM6.SetActive(true);
+        painelM6Ativo = true;
         Smute.GetComponent<mute>().m3 = false;
         CanvasPauseRestart.GetComponent<Pause>().m3 = false;
         CanvasPauseRestart.GetComponent<Restart>().m3 = false;
         Player.GetComponent<Player>().m3 = false;
-        GameObject.Find("InputMoveIf").GetComponent<TMP_InputField>().Select();
+        GameObject.Find("InputWhile").GetComponent<TMP_InputField>().Select();
 
     }
-    public void P4Continuar()
+    public void P6Continuar()
     {
-        painelM4.SetActive(false);
-        painelM4Ativo = false;
+        painelM6.SetActive(false);
+        painelM6Ativo = false;
         Smute.GetComponent<mute>().m3 = true;
         CanvasPauseRestart.GetComponent<Pause>().m3 = true;
         CanvasPauseRestart.GetComponent<Restart>().m3 = true;
@@ -97,20 +99,16 @@ public class PainelM4 : MonoBehaviour
 
     public void ativarPlataforma()
     {
-        if (texto == "True")
+        if (texto == "While 3")
         {
-            AtivarMoveP2.ativar2 = true;
-            Laser.SetActive(true);
-        }
-        else if (texto == "False")
-        {
-            AtivarMoveP2.ativar2 = false;
-            Laser.SetActive(false);
-
+            plataforma1.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma2.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma3.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma4.GetComponent<AtivarWhileMoveP>().ativar = false;
         }
         else
         {
-            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! O valor não existe no contexto atual";
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Escreva While 3, apenas teste";
             ConsoleERRO.SetActive(true);
 
         }

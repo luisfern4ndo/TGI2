@@ -64,16 +64,20 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />
+    <Compile Include="Assets\Scripts\AtivarWhileMoveP.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
     <Compile Include="Assets\Scripts\cameraManager.cs" />
+    <Compile Include="Assets\Scripts\Cd.cs" />
     <Compile Include="Assets\Scripts\checkpoint.cs" />
     <Compile Include="Assets\Scripts\DesativarInformativo.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\DestroyBlood.cs" />
     <Compile Include="Assets\Scripts\DestroyInformativo.cs" />
+    <Compile Include="Assets\Scripts\EnemyHorizonalInativo.cs" />
     <Compile Include="Assets\Scripts\EnemyHorizontal.cs" />
     <Compile Include="Assets\Scripts\IntAtivar.cs" />
+    <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\LaserAzul.cs" />
     <Compile Include="Assets\Scripts\LaserM4.cs" />
     <Compile Include="Assets\Scripts\LaserVerde.cs" />
@@ -86,6 +90,10 @@
     <Compile Include="Assets\Scripts\PainelM2.cs" />
     <Compile Include="Assets\Scripts\PainelM3.cs" />
     <Compile Include="Assets\Scripts\PainelM4.cs" />
+    <Compile Include="Assets\Scripts\PainelM5.cs" />
+    <Compile Include="Assets\Scripts\PainelM6.cs" />
+    <Compile Include="Assets\Scripts\PainelM7.cs" />
+    <Compile Include="Assets\Scripts\PainelM8.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\popBOOL.cs" />
