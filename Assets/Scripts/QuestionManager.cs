@@ -9,7 +9,6 @@ public class QuestionManager : MonoBehaviour
 {
 
     public GameObject panelQuestion1;
-    public GameObject panelQuestion2;
 
     public Question[] questions;
     private static List<Question> unansweredQuestion;
@@ -30,6 +29,9 @@ public class QuestionManager : MonoBehaviour
 
     [SerializeField]
     Animator animator;
+
+    public int contQuestions = 0;
+    public int qtdCorretas = 0;
 
 
     void Start()
@@ -66,18 +68,29 @@ public class QuestionManager : MonoBehaviour
             falseAnswerText.text = "CORRETO";
         }
 
+        contQuestions++;
+
     }
 
     IEnumerator TransitionToNextQuestion()
-    {       
-            
+    {
+        if (contQuestions < 10)
+        {
 
             yield return new WaitForSeconds(timeBetweenQuestions);
 
             animator.SetTrigger("No");
-            
+
             panelQuestion1.SetActive(false);
-            panelQuestion2.SetActive(true);
+            panelQuestion1.SetActive(true);
+
+            SetCurrentQuestion();
+        }
+        else
+        {
+            Debug.Log("ACABOU, você acertou " +qtdCorretas+ " de 10 questões");
+            panelQuestion1.SetActive(false);
+        }
 
     }
 
@@ -87,6 +100,7 @@ public class QuestionManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRETO");
+            qtdCorretas++;
             
         }
         else
@@ -104,6 +118,7 @@ public class QuestionManager : MonoBehaviour
         if (!currentQuestion.isTrue)
         {
             Debug.Log("CORRETO");
+            qtdCorretas++;
            
         }
         else
