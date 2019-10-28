@@ -29,28 +29,43 @@ public class Porta : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && colidPlayer && desbloquear)
         {
-           AtravessarPorta();
+
+            AtravessarPorta();
             aperteX.enabled = false;
 
         }else if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !desbloquear)
         {
             if (gamePlayer.GetComponent<Player>().keys >= 1)
             {
-                desbloquear = true;
+
+                aperteX.enabled = false;
+                GetComponent<Animator>().SetBool("Destrancada", true);
                 ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "PORTA DESTRANCADA";
                 ConsoleInformativo.SetActive(true);
                 gamePlayer.GetComponent<Player>().keys--;
                 gamePlayer.GetComponent<Player>().TextKeys.text = gamePlayer.GetComponent<Player>().keys.ToString();
+
+                StartCoroutine(destrancar());
+                
             }
             else
             {
-                ConsoleErro.GetComponent<TextMeshProUGUI>().text = "A porta está trancada, você precisa de uma chave";
-                ConsoleErro.SetActive(true);
+                if (ConsoleInformativo.activeInHierarchy == false) {
+                    ConsoleErro.GetComponent<TextMeshProUGUI>().text = "A porta está trancada, você precisa de uma chave";
+                    ConsoleErro.SetActive(true);
+                }
             }
         }
 
     }
 
+    IEnumerator destrancar()
+    {
+        yield return new WaitForSeconds(2f);
+        desbloquear = true;
+        GetComponent<Animator>().SetBool("Destrancada2", true);
+        aperteX.enabled = true;
+    }
     public void OnTriggerEnter2D(Collider2D collision2d)
     {
         if (collision2d.gameObject.CompareTag("Player"))

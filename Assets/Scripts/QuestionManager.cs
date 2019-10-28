@@ -25,7 +25,10 @@ public class QuestionManager : MonoBehaviour
     private TextMeshProUGUI falseAnswerText;
 
     [SerializeField]
-    private float timeBetweenQuestions = 1f;
+    private float timeBetweenQuestions = 1.1f;
+
+    [SerializeField]
+    private float timeResposta = 1.15f;
 
     [SerializeField]
     Animator animator;
@@ -43,8 +46,8 @@ public class QuestionManager : MonoBehaviour
         }
 
         SetCurrentQuestion();
-        
-        
+
+       
     }
 
 
@@ -69,6 +72,7 @@ public class QuestionManager : MonoBehaviour
         }
 
         contQuestions++;
+        StartCoroutine(tempoResposta());
 
     }
 
@@ -82,6 +86,8 @@ public class QuestionManager : MonoBehaviour
             animator.SetTrigger("No");
 
             panelQuestion1.SetActive(false);
+            trueAnswerText.GetComponent<TextMeshProUGUI>().enabled = false;
+            falseAnswerText.GetComponent<TextMeshProUGUI>().enabled = false;
             panelQuestion1.SetActive(true);
 
             SetCurrentQuestion();
@@ -94,19 +100,22 @@ public class QuestionManager : MonoBehaviour
 
     }
 
+    IEnumerator tempoResposta()
+    {
+        yield return new WaitForSeconds(timeResposta);
+        trueAnswerText.GetComponent<TextMeshProUGUI>().enabled = true;
+        falseAnswerText.GetComponent<TextMeshProUGUI>().enabled = true;
+    }
+
         public void UserSelectTrue()
     {
         animator.SetTrigger("True");
         if (currentQuestion.isTrue)
-        {
-            Debug.Log("CORRETO");
+        {      
             qtdCorretas++;
             
         }
-        else
-        {
-            Debug.Log("BURRO");
-        }
+        
 
         StartCoroutine(TransitionToNextQuestion());
     
@@ -117,14 +126,9 @@ public class QuestionManager : MonoBehaviour
         animator.SetTrigger("False");
         if (!currentQuestion.isTrue)
         {
-            Debug.Log("CORRETO");
             qtdCorretas++;
-           
         }
-        else
-        {
-            Debug.Log("BURRO");
-        }
+       
         StartCoroutine(TransitionToNextQuestion());
     }
 
