@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class mute : MonoBehaviour
 {
-    public bool m1;
-    public bool m2;
-    public bool m3;
+    public bool MonitorAtivado { get; set; }
 
     public bool isMute;
     void Start()
     {
-        m1 = true;
-        m2 = true;
-        m3 = true;
-        if(AudioListener.volume == 0)
+        MonitorAtivado = false;
+        if (AudioListener.volume == 0)
         {
             isMute = true;
         }
     }
     void Update()
     {
-       
+
 
         if (isMute)
         {
@@ -32,12 +28,12 @@ public class mute : MonoBehaviour
             GetComponent<Animator>().SetBool("Som", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && m1 && m2 && m3)
+        if (Input.GetKeyDown(KeyCode.S) && !MonitorAtivado)
         {
             Mute();
         }
 
-    }    
+    }
 
     public void Mute()
     {

@@ -32,6 +32,7 @@ TagManager:
   - runMonitor1
   - Cd
   - Cd2
+  - questionManager
   layers:
   - Default
   - TransparentFX

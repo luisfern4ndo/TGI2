@@ -32,7 +32,7 @@ public class PainelM7 : MonoBehaviour
 
         }
 
-        else if (!colidPlayer || Input.GetKeyDown(KeyCode.X) && painelM7Ativo || Input.GetKeyDown(KeyCode.KeypadEnter) && painelM7Ativo)
+        else if (Input.GetKeyDown(KeyCode.X) && painelM7Ativo || Input.GetKeyDown(KeyCode.KeypadEnter) && painelM7Ativo)
         {
             P7Continuar();
 
@@ -65,20 +65,20 @@ public class PainelM7 : MonoBehaviour
     {
         painelM7.SetActive(true);
         painelM7Ativo = true;
-        Smute.GetComponent<mute>().m2 = false;
-        CanvasPauseRestart.GetComponent<Pause>().m2 = false;
-        CanvasPauseRestart.GetComponent<Restart>().m2 = false;
-        Player.GetComponent<Player>().m2 = false;
+        Smute.GetComponent<mute>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
+        Player.GetComponent<Player>().MonitorAtivado = true;
 
     }
     public void P7Continuar()
     {
         painelM7.SetActive(false);
         painelM7Ativo = false;
-        Smute.GetComponent<mute>().m2 = true;
-        CanvasPauseRestart.GetComponent<Pause>().m2 = true;
-        CanvasPauseRestart.GetComponent<Restart>().m2 = true;
-        Player.GetComponent<Player>().m2 = true;
+        Smute.GetComponent<mute>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
+        Player.GetComponent<Player>().MonitorAtivado = false;
 
     }
 }

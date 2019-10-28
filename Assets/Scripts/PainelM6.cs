@@ -78,10 +78,10 @@ public class PainelM6 : MonoBehaviour
     {
         painelM6.SetActive(true);
         painelM6Ativo = true;
-        Smute.GetComponent<mute>().m3 = false;
-        CanvasPauseRestart.GetComponent<Pause>().m3 = false;
-        CanvasPauseRestart.GetComponent<Restart>().m3 = false;
-        Player.GetComponent<Player>().m3 = false;
+        Smute.GetComponent<mute>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
+        Player.GetComponent<Player>().MonitorAtivado = true;
         GameObject.Find("InputWhile").GetComponent<TMP_InputField>().Select();
 
     }
@@ -89,10 +89,10 @@ public class PainelM6 : MonoBehaviour
     {
         painelM6.SetActive(false);
         painelM6Ativo = false;
-        Smute.GetComponent<mute>().m3 = true;
-        CanvasPauseRestart.GetComponent<Pause>().m3 = true;
-        CanvasPauseRestart.GetComponent<Restart>().m3 = true;
-        Player.GetComponent<Player>().m3 = true;
+        Smute.GetComponent<mute>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
+        Player.GetComponent<Player>().MonitorAtivado = false;
 
     }
 

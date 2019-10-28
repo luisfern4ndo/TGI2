@@ -22,12 +22,13 @@ public class PainelM5 : MonoBehaviour
 
     void Start()
     {
+        painelM5Ativo = false;
         aperteX.enabled = false;
     }
 
-   
+
     void Update()
-    { 
+    {
         texto = textoinput.text;
 
         if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM5Ativo)
@@ -49,63 +50,63 @@ public class PainelM5 : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D collision2d)
-{
-    if (collision2d.gameObject.CompareTag("Player"))
     {
-        colidPlayer = true;
-        aperteX.enabled = true;
+        if (collision2d.gameObject.CompareTag("Player"))
+        {
+            colidPlayer = true;
+            aperteX.enabled = true;
+
+        }
 
     }
 
-}
-
-public void OnTriggerExit2D(Collider2D collision2d)
-{
-    if (collision2d.gameObject.CompareTag("Player"))
+    public void OnTriggerExit2D(Collider2D collision2d)
     {
-        colidPlayer = false;
-        aperteX.enabled = false;
+        if (collision2d.gameObject.CompareTag("Player"))
+        {
+            colidPlayer = false;
+            aperteX.enabled = false;
+        }
+
     }
 
-}
 
-
-public void ativarP5()
-{
-    painelM5.SetActive(true);
-    painelM5Ativo = true;
-    Smute.GetComponent<mute>().m3 = false;
-    CanvasPauseRestart.GetComponent<Pause>().m3 = false;
-    CanvasPauseRestart.GetComponent<Restart>().m3 = false;
-    Player.GetComponent<Player>().m3 = false;
-    GameObject.Find("InputIndice").GetComponent<TMP_InputField>().Select();
-
-}
-public void P5Continuar()
-{
-    painelM5.SetActive(false);
-    painelM5Ativo = false;
-    Smute.GetComponent<mute>().m3 = true;
-    CanvasPauseRestart.GetComponent<Pause>().m3 = true;
-    CanvasPauseRestart.GetComponent<Restart>().m3 = true;
-    Player.GetComponent<Player>().m3 = true;
-
-}
-
-
-public void verificarIndice()
-{
-    if (texto == "2")
+    public void ativarP5()
     {
+        painelM5.SetActive(true);
+        painelM5Ativo = true;
+        Smute.GetComponent<mute>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
+        Player.GetComponent<Player>().MonitorAtivado = true;
+        GameObject.Find("InputIndice").GetComponent<TMP_InputField>().Select();
+
+    }
+    public void P5Continuar()
+    {
+        painelM5.SetActive(false);
+        painelM5Ativo = false;
+        Smute.GetComponent<mute>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
+        Player.GetComponent<Player>().MonitorAtivado = false;
+
+    }
+
+
+    public void verificarIndice()
+    {
+        if (texto == "2")
+        {
             Key.GetComponent<Key>().indiceCorreto = true;
         }
-    else
-    {
-        ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Valor do indice incorreto";
-        ConsoleERRO.SetActive(true);
+        else
+        {
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Valor do indice incorreto";
+            ConsoleERRO.SetActive(true);
 
+        }
     }
-}
 
 
 }

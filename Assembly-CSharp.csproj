@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Questions.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />
     <Compile Include="Assets\Scripts\AtivarWhileMoveP.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Assets\Scripts\popSTRING.cs" />
     <Compile Include="Assets\Scripts\Porta.cs" />
     <Compile Include="Assets\Scripts\PortaReturn.cs" />
+    <Compile Include="Assets\Scripts\QuestionManager.cs" />
     <Compile Include="Assets\Scripts\respawnPlayer.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\seguirBOOL.cs" />

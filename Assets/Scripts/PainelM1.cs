@@ -38,78 +38,78 @@ public class PainelM1 : MonoBehaviour
 
     public void Update()
     {
-            nomePlayer = textoInput.text;
-           if (nomePlayer.Length > 0)
-            {
-                runButton.SetActive(true);
+        nomePlayer = textoInput.text;
+        if (nomePlayer.Length > 0)
+        {
+            runButton.SetActive(true);
             botaoAtivo = true;
-           
+
         }
         else
         {
             runButton.SetActive(false);
             botaoAtivo = false;
         }
-        
-            if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM1Ativo)
-            {
-                ativarP1();
-                aperteX.enabled = false;
-               
+
+        if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !painelM1Ativo)
+        {
+            ativarP1();
+            aperteX.enabled = false;
+
 
         }
 
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo && botaoAtivo)
-            {
-                P1Continuar();
-                DestroyGameObject();
-            }
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo && botaoAtivo)
+        {
+            P1Continuar();
+            DestroyGameObject();
+        }
 
 
     }
 
-        public void OnTriggerEnter2D(Collider2D collision2d)
+    public void OnTriggerEnter2D(Collider2D collision2d)
+    {
+        if (collision2d.gameObject.CompareTag("Player"))
         {
-            if (collision2d.gameObject.CompareTag("Player"))
-            {
-                colidPlayer = true;
-                aperteX.enabled = true;
+            colidPlayer = true;
+            aperteX.enabled = true;
 
         }
 
-        }
+    }
 
-        public void OnTriggerExit2D(Collider2D collision2d)
-        {
+    public void OnTriggerExit2D(Collider2D collision2d)
+    {
         if (collision2d.gameObject.CompareTag("Player"))
         {
             colidPlayer = false;
             aperteX.enabled = false;
         }
-        
-        }
+
+    }
 
 
-        public void ativarP1()
-        {
-            painelM1.SetActive(true);
-            painelM1Ativo = true;
-        Smute.GetComponent<mute>().m1 = false;
-        CanvasPauseRestart.GetComponent<Pause>().m1 = false;
-        CanvasPauseRestart.GetComponent<Restart>().m1 = false;
-        Player.GetComponent<Player>().m1 = false;
+    public void ativarP1()
+    {
+        painelM1.SetActive(true);
+        painelM1Ativo = true;
+        Smute.GetComponent<mute>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
+        Player.GetComponent<Player>().MonitorAtivado = true;
         GameObject.Find("nomeHacker").GetComponent<TMP_InputField>().Select();
 
     }
-        public void P1Continuar()
-        {
-            painelM1.SetActive(false);
-            painelM1Ativo = false;
-        Smute.GetComponent<mute>().m1 = true;
-        CanvasPauseRestart.GetComponent<Pause>().m1 = true;
-        CanvasPauseRestart.GetComponent<Restart>().m1 = true;
-        Player.GetComponent<Player>().m1 = true;
+    public void P1Continuar()
+    {
+        painelM1.SetActive(false);
+        painelM1Ativo = false;
+        Smute.GetComponent<mute>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
+        CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
+        Player.GetComponent<Player>().MonitorAtivado = false;
 
     }
 

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))] // obrigatorio player ter rigidbody2d
 public class Player : MonoBehaviour
 {
-    
+
     public float velocidade;
     public int lives;
     public int keys;
@@ -21,10 +21,8 @@ public class Player : MonoBehaviour
     public Transform myTransform;
     public respawnPlayer gameRespawnManager;
     public GameObject blood;
-    public bool m1;
-    public bool m2;
-    public bool m3;
     Rigidbody2D rb;
+    public bool MonitorAtivado;
 
     //pulo
     public Transform groundCheck;
@@ -33,7 +31,7 @@ public class Player : MonoBehaviour
     public bool isGrounded2 = false;
     public LayerMask whatIsGround;
     public float forcaPulo;
-    
+
 
 
     void Start()
@@ -43,9 +41,7 @@ public class Player : MonoBehaviour
         cd = 0;
         myTransform = transform;
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
-        m1 = true;
-        m2 = true;
-        m3 = true;
+        MonitorAtivado = false;
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -53,16 +49,19 @@ public class Player : MonoBehaviour
     void configRB()
     {
         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        
     }
     void configPadrao()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.WakeUp();
+
     }
 
     void Update()
     {
-    
-        if (m1 && m2 && m3)
+
+        if (!MonitorAtivado)
         {
 
             configPadrao();
@@ -79,7 +78,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.Space) && isGrounded2)
             {
                 rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
-                
+
             }
 
 
@@ -147,7 +146,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        
+
 
     }
     void OnCollisionExit2D(Collision2D collision2d)//para de colidir
@@ -156,10 +155,10 @@ public class Player : MonoBehaviour
         if (collision2d.transform.tag == "Hplataforma")
         {
             myTransform.parent = null;
-           
+
         }
 
-   
+
     }
 
     //pegar keys e lives
@@ -189,7 +188,7 @@ public class Player : MonoBehaviour
         if (collision2d.gameObject.CompareTag("CheckOutros"))
         {
             lastCheckpoint = collision2d.gameObject;
-            
+
         }
 
         if (collision2d.gameObject.CompareTag("deathArea"))
@@ -204,7 +203,7 @@ public class Player : MonoBehaviour
             else
             {
                 Perdeu();
-                
+
             }
         }
 
@@ -212,7 +211,7 @@ public class Player : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision2d)
     {
-        
+
     }
 
     public void RestartGame()
@@ -225,7 +224,7 @@ public class Player : MonoBehaviour
     {
         gameRespawnManager.Respwan();
         TextLives.text = lives.ToString();
-        
+
     }
 
 }
