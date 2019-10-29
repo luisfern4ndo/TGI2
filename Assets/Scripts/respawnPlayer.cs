@@ -7,6 +7,7 @@ public class respawnPlayer : MonoBehaviour
 {
     public float respawnDelay;
     public Player gamePlayer;
+    public GameObject GameOverMsg;
 
     void Start()
     {
@@ -34,12 +35,19 @@ public class respawnPlayer : MonoBehaviour
     public void gameOver()
     {
         gamePlayer.gameObject.SetActive(false);
-        Invoke("Restart", 3f);
+        Invoke("GAMEOVER", 2f);
     }
 
-    public void Restart()
+    public void GAMEOVER()
     {
-        SceneManager.LoadScene("Cena 2 Inicio");
+        GameOverMsg.SetActive(true);
+        StartCoroutine(RestartGameOver());
+    }
+
+    IEnumerator RestartGameOver()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Cena 3 Jogo");
     }
 
 }

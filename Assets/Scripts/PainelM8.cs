@@ -68,6 +68,7 @@ public class PainelM8 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
+        GameObject.Find("btIniciarQuest").GetComponent<Button>().Select();
 
     }
     public void chamarQuest()

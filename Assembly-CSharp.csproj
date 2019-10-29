@@ -79,6 +79,8 @@
     <Compile Include="Assets\Scripts\DestroyInformativo.cs" />
     <Compile Include="Assets\Scripts\EnemyHorizonalInativo.cs" />
     <Compile Include="Assets\Scripts\EnemyHorizontal.cs" />
+    <Compile Include="Assets\Scripts\FINAL.cs" />
+    <Compile Include="Assets\Scripts\INICIO.cs" />
     <Compile Include="Assets\Scripts\IntAtivar.cs" />
     <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\LaserAzul.cs" />

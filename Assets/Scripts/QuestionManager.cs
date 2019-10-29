@@ -9,6 +9,8 @@ public class QuestionManager : MonoBehaviour
 {
 
     public GameObject panelQuestion1;
+    public GameObject panelFINAL;
+    public TextMeshProUGUI txtFINAL;
 
     public Question[] questions;
     private static List<Question> unansweredQuestion;
@@ -100,6 +102,7 @@ public class QuestionManager : MonoBehaviour
             aguardeNovaQuest = true;
             Debug.Log("ACABOU, você acertou " +qtdCorretas+ " de 10 questões");
             panelQuestion1.SetActive(false);
+            StartCoroutine(final());
         }
 
     }
@@ -109,6 +112,23 @@ public class QuestionManager : MonoBehaviour
         yield return new WaitForSeconds(timeResposta);
         trueAnswerText.GetComponent<TextMeshProUGUI>().enabled = true;
         falseAnswerText.GetComponent<TextMeshProUGUI>().enabled = true;
+    }
+
+    IEnumerator final()
+    {
+        if(qtdCorretas < 6)
+        {
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "GAME OVER\n <size=18>Foi acertado " + qtdCorretas+ "/10 questões, ainda não foi o suficiente para deter o virus, que acabou corrompendo todos os robos que já o enfrentaram.Sua mente pode ser reprogramada para uma nova tentativa caso tenha força de vontade para aprender, espero que a jornada tenha sido divertida e que na próxima vez você consiga aprender bem para cumprir a missão.Obrigado!</size>";
+            yield return new WaitForSeconds(4f);
+            panelFINAL.SetActive(true);
+        }
+        else
+        {
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "O virus foi derrotado graças ao jovem robo que teve coragem de buscar o conhecimento para enfrenta-lo enquanto passava por todos os desafios. Foram acertadas " + qtdCorretas +"/10 questões, parabéns pelo trabaho e espero que tenha se divertido, obrigado!";
+            yield return new WaitForSeconds(4f);
+            panelFINAL.SetActive(true);
+        }  
+
     }
 
     public void UserSelectTrue()

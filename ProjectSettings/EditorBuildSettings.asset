@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cena 1 Menu.unity
     guid: 5f5a38ac3f7c09640957f52b9f4ba6e3
   - enabled: 1
-    path: Assets/Scenes/Cena 2 Inicio.unity
+    path: Assets/Scenes/Cena 2 Historia.unity
+    guid: d9782ed03bb832a4db5818bef46ca0d9
+  - enabled: 1
+    path: Assets/Scenes/Cena 3 Jogo.unity
     guid: 20737ffe4d31edc4ba280ffce3dee9b3
   m_configObjects: {}

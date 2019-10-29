@@ -82,7 +82,7 @@ public class PainelM6 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
-        GameObject.Find("InputWhile").GetComponent<TMP_InputField>().Select();
+        textoinput.Select();
 
     }
     public void P6Continuar()

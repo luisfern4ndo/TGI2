@@ -85,7 +85,7 @@ public class PainelM5 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
-        GameObject.Find("InputIndice").GetComponent<TMP_InputField>().Select();
+        textoinput.Select();
 
     }
     public void P5Continuar()

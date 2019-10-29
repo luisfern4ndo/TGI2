@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0;
+        GameObject.Find("ResumeButton").GetComponent<Button>().Select();
 
 
     }

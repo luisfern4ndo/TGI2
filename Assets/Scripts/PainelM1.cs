@@ -99,7 +99,7 @@ public class PainelM1 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
-        GameObject.Find("nomeHacker").GetComponent<TMP_InputField>().Select();
+        textoInput.Select();
 
     }
     public void P1Continuar()
