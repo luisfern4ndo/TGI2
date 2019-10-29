@@ -27,6 +27,8 @@ public class QuestionManager : MonoBehaviour
     [SerializeField]
     private float timeBetweenQuestions = 1.1f;
 
+    public bool aguardeNovaQuest = false;
+
     [SerializeField]
     private float timeResposta = 1.15f;
 
@@ -59,6 +61,7 @@ public class QuestionManager : MonoBehaviour
         unansweredQuestion.Remove(currentQuestion);
 
         factText.text = currentQuestion.fact;
+        aguardeNovaQuest = false;
 
         if (currentQuestion.isTrue)
         {
@@ -80,7 +83,7 @@ public class QuestionManager : MonoBehaviour
     {
         if (contQuestions < 10)
         {
-
+            aguardeNovaQuest = true;
             yield return new WaitForSeconds(timeBetweenQuestions);
 
             animator.SetTrigger("No");
@@ -94,6 +97,7 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
+            aguardeNovaQuest = true;
             Debug.Log("ACABOU, você acertou " +qtdCorretas+ " de 10 questões");
             panelQuestion1.SetActive(false);
         }
@@ -107,29 +111,31 @@ public class QuestionManager : MonoBehaviour
         falseAnswerText.GetComponent<TextMeshProUGUI>().enabled = true;
     }
 
-        public void UserSelectTrue()
+    public void UserSelectTrue()
     {
         animator.SetTrigger("True");
-        if (currentQuestion.isTrue)
-        {      
-            qtdCorretas++;
-            
-        }
         
+            if (currentQuestion.isTrue && aguardeNovaQuest == false)
+        {
+            qtdCorretas++;
 
-        StartCoroutine(TransitionToNextQuestion());
+        }
+            StartCoroutine(TransitionToNextQuestion());
     
     }
 
     public void UserSelectFalse()
     {
         animator.SetTrigger("False");
-        if (!currentQuestion.isTrue)
-        {
-            qtdCorretas++;
-        }
-       
-        StartCoroutine(TransitionToNextQuestion());
+        
+
+            if (!currentQuestion.isTrue && aguardeNovaQuest == false)
+            {
+                qtdCorretas++;
+            }
+
+            StartCoroutine(TransitionToNextQuestion());
+        
     }
 
 }

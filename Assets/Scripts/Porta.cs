@@ -14,6 +14,7 @@ public class Porta : MonoBehaviour
     public bool desbloquear;
     public GameObject ConsoleErro;
     public GameObject ConsoleInformativo;
+    public GameObject ConsoleKey;
 
 
     void Start()
@@ -35,15 +36,14 @@ public class Porta : MonoBehaviour
 
         }else if (Input.GetKeyDown(KeyCode.X) && colidPlayer && !desbloquear)
         {
-            if (gamePlayer.GetComponent<Player>().keys >= 1)
+            if (ConsoleKey.activeInHierarchy)
             {
 
                 aperteX.enabled = false;
                 GetComponent<Animator>().SetBool("Destrancada", true);
-                ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "PORTA DESTRANCADA";
+                ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "A porta foi aberta";
                 ConsoleInformativo.SetActive(true);
-                gamePlayer.GetComponent<Player>().keys--;
-                gamePlayer.GetComponent<Player>().TextKeys.text = gamePlayer.GetComponent<Player>().keys.ToString();
+                ConsoleKey.SetActive(false);
 
                 StartCoroutine(destrancar());
                 

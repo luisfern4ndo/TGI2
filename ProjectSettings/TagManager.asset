@@ -33,6 +33,7 @@ TagManager:
   - Cd
   - Cd2
   - questionManager
+  - colecionaveis
   layers:
   - Default
   - TransparentFX

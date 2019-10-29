@@ -16,14 +16,24 @@ public class EnemyHorizonalInativo : MonoBehaviour
     {
         if (inativo == false)
         {
-            GetComponent<Animator>().SetBool("Ativado", true);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(move, GetComponent<Rigidbody2D>().velocity.y);
-            if (colidde)
-            {
-                Flip();
-            }
+            GetComponent<Animator>().SetBool("Ativando", true);
+            StartCoroutine(ativando());
+            
         }
     }
+
+
+    IEnumerator ativando()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<Animator>().SetBool("Ativado", true);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(move, GetComponent<Rigidbody2D>().velocity.y);
+        if (colidde)
+        {
+            Flip();
+        }
+    }
+
 
     void Flip()
     {

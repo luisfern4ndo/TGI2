@@ -10,12 +10,13 @@ public class Player : MonoBehaviour
 
     public float velocidade;
     public int lives;
-    public int keys;
+    public int colecionaveis;
     public int cd;
     public GameObject cdConsole;
     public GameObject cd2Console;
+    public GameObject ConsoleKey;
     public Text TextLives;
-    public Text TextKeys;
+    public Text TextColecionaveis;
     public GameObject lastCheckpoint;
     public bool morto;
     public Transform myTransform;
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         TextLives.text = lives.ToString();
-        TextKeys.text = keys.ToString();
+        TextColecionaveis.text = colecionaveis.ToString();
         cd = 0;
         myTransform = transform;
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
@@ -115,12 +116,17 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision2d)//player colide
     {
+        if (collision2d.gameObject.CompareTag("colecionaveis"))
+        {
+            collision2d.gameObject.SetActive(false);
+            colecionaveis++;
+            TextColecionaveis.text = colecionaveis.ToString();
+        }
 
         if (collision2d.gameObject.CompareTag("Key"))
         {
-            Destroy(collision2d.gameObject);
-            keys++;
-            TextKeys.text = keys.ToString();
+            collision2d.gameObject.SetActive(false);
+            ConsoleKey.SetActive(true);
         }
 
         if (collision2d.transform.tag == "Hplataforma")
@@ -165,6 +171,12 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision2d)
     {
+        if (collision2d.gameObject.CompareTag("colecionaveis"))
+        {
+            collision2d.gameObject.SetActive(false);
+            colecionaveis++;
+            TextColecionaveis.text = colecionaveis.ToString();
+        }
 
         if (collision2d.gameObject.CompareTag("Cd"))
         {

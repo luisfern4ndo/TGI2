@@ -15,7 +15,13 @@ public class PainelM5 : MonoBehaviour
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
+
     public GameObject Key;
+    public GameObject Ferramenta;
+    public GameObject Engrenagem;
+    public GameObject Python;
+    public GameObject Death;
+    public GameObject Disk;
 
     public Text aperteX;
     public GameObject ConsoleERRO;
@@ -96,13 +102,35 @@ public class PainelM5 : MonoBehaviour
 
     public void verificarIndice()
     {
-        if (texto == "2")
+
+        if (texto == "0")
+        {
+            Ferramenta.GetComponent<Key>().indiceCorreto = true;
+        }
+        else if (texto == "1")
+        {
+            Disk.GetComponent<Key>().indiceCorreto = true;
+        }
+        
+        else if (texto == "2")
         {
             Key.GetComponent<Key>().indiceCorreto = true;
         }
+        else if (texto == "3")
+        {
+            Death.GetComponent<Key>().indiceCorreto = true;
+        }
+        else if (texto == "4")
+        {
+            Python.GetComponent<Key>().indiceCorreto = true;
+        }
+        else if (texto == "5")
+        {
+            Engrenagem.GetComponent<Key>().indiceCorreto = true;
+        }
         else
         {
-            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Valor do indice incorreto";
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Não existe um elemento no indice "+ texto;
             ConsoleERRO.SetActive(true);
 
         }
