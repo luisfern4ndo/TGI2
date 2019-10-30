@@ -122,20 +122,20 @@ public class QuestionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             gamePlayer.GetComponent<Animator>().SetBool("gameover", true);
             txtFINAL.GetComponent<TextMeshProUGUI>().text = "GAME OVER\n <size=18>Foi acertado " + qtdCorretas+ "/10 questões, ainda não foi o suficiente para deter o virus, que acabou corrompendo todos os robos que já o enfrentaram.Sua mente pode ser reprogramada para uma nova tentativa caso tenha força de vontade para aprender, espero que a jornada tenha sido divertida e que na próxima vez você consiga aprender bem para cumprir a missão.Obrigado!</size>";
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(6f);
             panelFINAL.SetActive(true);
         }
         else
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
-            yield return new WaitForSeconds(1f);
-            gameBOSS.GetComponent<BossDerrota>().derrotado = true;
             txtFINAL.GetComponent<TextMeshProUGUI>().text = "O virus foi derrotado graças ao jovem robo que teve coragem de buscar o conhecimento para enfrenta-lo enquanto passava por todos os desafios. Foram acertadas " + qtdCorretas +"/10 questões, parabéns pelo trabaho e espero que tenha se divertido, obrigado!";
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(3.5f);
+            gameBOSS.GetComponent<BossDerrota>().derrotado = true;
+            yield return new WaitForSeconds(6f);
             panelFINAL.SetActive(true);
         }  
 

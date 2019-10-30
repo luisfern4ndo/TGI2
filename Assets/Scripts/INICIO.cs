@@ -15,7 +15,7 @@ public class INICIO : MonoBehaviour
 
     IEnumerator Iniciar()
     {
-        yield return new WaitForSeconds(16f);
+        yield return new WaitForSeconds(30f);
         SceneManager.LoadScene("Cena 3 Jogo");
     }
 
