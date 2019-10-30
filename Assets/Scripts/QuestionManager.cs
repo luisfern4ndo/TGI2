@@ -10,6 +10,7 @@ public class QuestionManager : MonoBehaviour
 
     public GameObject gamePlayer;
     public GameObject gameBOSS;
+    public GameObject consoleTotalColecionaveis;
 
     public GameObject panelQuestion1;
     public GameObject panelFINAL;
@@ -104,6 +105,7 @@ public class QuestionManager : MonoBehaviour
         {
             aguardeNovaQuest = true;
             Debug.Log("ACABOU, você acertou " +qtdCorretas+ " de 10 questões");
+            consoleTotalColecionaveis.SetActive(true);
             StartCoroutine(final());
         }
 
@@ -122,20 +124,20 @@ public class QuestionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2.2f);
             gamePlayer.GetComponent<Animator>().SetBool("gameover", true);
-            txtFINAL.GetComponent<TextMeshProUGUI>().text = "GAME OVER\n <size=18>Foi acertado " + qtdCorretas+ "/10 questões, ainda não foi o suficiente para deter o virus, que acabou corrompendo todos os robos que já o enfrentaram.Sua mente pode ser reprogramada para uma nova tentativa caso tenha força de vontade para aprender, espero que a jornada tenha sido divertida e que na próxima vez você consiga aprender bem para cumprir a missão.Obrigado!</size>";
-            yield return new WaitForSeconds(6f);
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>GAME OVER</b>\n Foi acertado " + qtdCorretas+ "/10 questões, o vírus ganhou esta batalha e os robos estão se destruindo, no final das contas os humanos não deixaram barato. Obrigado por jogar este beta!  Esperamos que tenha se divertido e aprendido algo \n\nLuis Fernando de Góis Teixeira\nGuilherme Guimarães\nUniversidade Cruzeiro do Sul";
+            yield return new WaitForSeconds(5f);
             panelFINAL.SetActive(true);
         }
         else
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
-            txtFINAL.GetComponent<TextMeshProUGUI>().text = "O virus foi derrotado graças ao jovem robo que teve coragem de buscar o conhecimento para enfrenta-lo enquanto passava por todos os desafios. Foram acertadas " + qtdCorretas +"/10 questões, parabéns pelo trabaho e espero que tenha se divertido, obrigado!";
-            yield return new WaitForSeconds(3.5f);
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>MISSÃO CUMPRIDA!</b>\nVocê acertou " + qtdCorretas + "/10 questões, o virus foi derrotado e o reinado dos robôs poderá finalmente prosperar. Obrigado por ter jogado este beta! Esperamos que tenha se divertido e aprendido algo \n\nLuis Fernando de Góis Teixeira\nGuilherme Guimarães\nUniversidade Cruzeiro do Sul";
+            yield return new WaitForSeconds(3f);
             gameBOSS.GetComponent<BossDerrota>().derrotado = true;
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(5f);
             panelFINAL.SetActive(true);
         }  
 

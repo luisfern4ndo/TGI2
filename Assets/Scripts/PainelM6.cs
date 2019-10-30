@@ -99,16 +99,36 @@ public class PainelM6 : MonoBehaviour
 
     public void ativarPlataforma()
     {
-        if (texto == "While 3")
+        if (texto == "0")
+        {
+            plataforma1.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma2.GetComponent<AtivarWhileMoveP>().ativar = false;
+            plataforma3.GetComponent<AtivarWhileMoveP>().ativar = false;
+            plataforma4.GetComponent<AtivarWhileMoveP>().ativar = false;
+        }
+        else if (texto == "1")
+        {
+            plataforma1.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma2.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma3.GetComponent<AtivarWhileMoveP>().ativar = false;
+            plataforma4.GetComponent<AtivarWhileMoveP>().ativar = false;
+        }
+        else if (texto == "2")
         {
             plataforma1.GetComponent<AtivarWhileMoveP>().ativar = true;
             plataforma2.GetComponent<AtivarWhileMoveP>().ativar = true;
             plataforma3.GetComponent<AtivarWhileMoveP>().ativar = true;
             plataforma4.GetComponent<AtivarWhileMoveP>().ativar = false;
         }
-        else
+        else if (texto == "3")
         {
-            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Escreva While 3, apenas teste";
+            plataforma1.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma2.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma3.GetComponent<AtivarWhileMoveP>().ativar = true;
+            plataforma4.GetComponent<AtivarWhileMoveP>().ativar = true;
+        }
+        else{
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! Esta array não possui um indice " + texto;
             ConsoleERRO.SetActive(true);
 
         }
