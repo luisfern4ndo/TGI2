@@ -32,7 +32,7 @@ public class PainelM7 : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.X) && painelM7Ativo || Input.GetKeyDown(KeyCode.KeypadEnter) && painelM7Ativo)
+        else if (Input.GetKeyDown(KeyCode.X) && painelM7Ativo || Input.GetKeyDown(KeyCode.KeypadEnter) && painelM7Ativo || Input.GetKeyDown(KeyCode.Return) && painelM7Ativo)
         {
             P7Continuar();
 

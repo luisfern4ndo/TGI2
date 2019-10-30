@@ -41,7 +41,7 @@ public class PainelM4 : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM4Ativo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM4Ativo || Input.GetKeyDown(KeyCode.Return) && painelM4Ativo)
         {
             ativarPlataforma();
             P4Continuar();

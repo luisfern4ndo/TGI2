@@ -42,7 +42,7 @@ public class PainelM6 : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM6Ativo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM6Ativo || Input.GetKeyDown(KeyCode.Return) && painelM6Ativo)
         {
             ativarPlataforma();
             P6Continuar();

@@ -58,7 +58,7 @@ public class botaoResetBox : MonoBehaviour
         bSTRING.transform.position = GameObject.FindGameObjectWithTag("respSTRING").transform.position;
         bBOOL.transform.position = GameObject.FindGameObjectWithTag("respBOOL").transform.position;
         ConsoleReset.SetActive(true);
-
+        
     }
 
 

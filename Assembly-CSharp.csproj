@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />
     <Compile Include="Assets\Scripts\AtivarWhileMoveP.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
+    <Compile Include="Assets\Scripts\BossDerrota.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
     <Compile Include="Assets\Scripts\btM7funcao.cs" />
     <Compile Include="Assets\Scripts\cameraManager.cs" />

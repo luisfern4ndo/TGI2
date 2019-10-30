@@ -60,7 +60,7 @@ public class PainelM1 : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo && botaoAtivo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM1Ativo && botaoAtivo || Input.GetKeyDown(KeyCode.Return) && painelM1Ativo && botaoAtivo)
         {
             P1Continuar();
             DestroyGameObject();

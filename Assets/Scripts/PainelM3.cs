@@ -39,7 +39,7 @@ public class PainelM3 : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM3Ativo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM3Ativo || Input.GetKeyDown(KeyCode.Return) && painelM3Ativo)
         {
             ativarPlataforma();
             P3Continuar();

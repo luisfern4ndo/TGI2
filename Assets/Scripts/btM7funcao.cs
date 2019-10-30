@@ -68,8 +68,11 @@ public class btM7funcao : MonoBehaviour
         }
         else
         {
-            ConsoleErro.GetComponent<TextMeshProUGUI>().text = "Esta função precisa de 2 valores de entrada";
-            ConsoleErro.SetActive(true);
+            
+                ConsoleErro.GetComponent<TextMeshProUGUI>().text = "Esta função precisa de 2 valores de entrada";
+                ConsoleErro.SetActive(true);
+                
+            
         }
     }
 

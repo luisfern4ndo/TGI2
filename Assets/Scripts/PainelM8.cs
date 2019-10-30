@@ -31,7 +31,7 @@ public class PainelM8 : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM8Ativo)
+        else if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM8Ativo || Input.GetKeyDown(KeyCode.Return) && painelM8Ativo)
         {
             chamarQuest();
 

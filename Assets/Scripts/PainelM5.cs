@@ -45,7 +45,7 @@ public class PainelM5 : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM5Ativo)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && painelM5Ativo || Input.GetKeyDown(KeyCode.Return) && painelM5Ativo)
         {
             verificarIndice();
             P5Continuar();
