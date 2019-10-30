@@ -15,6 +15,7 @@ public class btM7funcao : MonoBehaviour
     public GameObject Key;
     public GameObject consoleCD1;
     public GameObject consoleCD2;
+    public GameObject consoleBtInfo;
 
     void Start()
     {
@@ -64,6 +65,8 @@ public class btM7funcao : MonoBehaviour
             Player.GetComponent<Player>().cd = 0;
             consoleCD1.SetActive(false);
             consoleCD2.SetActive(false);
+            consoleBtInfo.GetComponent<TextMeshProUGUI>().text = "Função gerarChave(Cd1, Cd2) chamada com sucesso";
+            consoleBtInfo.SetActive(true);
 
         }
         else

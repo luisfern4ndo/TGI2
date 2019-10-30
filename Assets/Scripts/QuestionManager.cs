@@ -54,7 +54,6 @@ public class QuestionManager : MonoBehaviour
         }
 
         SetCurrentQuestion();
-
        
     }
 
@@ -64,9 +63,9 @@ public class QuestionManager : MonoBehaviour
         int randomQuestionIndex = Random.Range(0, unansweredQuestion.Count);
         currentQuestion = unansweredQuestion[randomQuestionIndex];
 
-        unansweredQuestion.Remove(currentQuestion);
-
+        unansweredQuestion.Remove(currentQuestion); 
         factText.text = currentQuestion.fact;
+      
         aguardeNovaQuest = false;
 
         if (currentQuestion.isTrue)

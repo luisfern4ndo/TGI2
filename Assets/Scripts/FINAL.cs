@@ -13,7 +13,7 @@ public class FINAL : MonoBehaviour
 
     IEnumerator Reiniciar()
     {
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(35f);
         SceneManager.LoadScene("Cena 1 Menu");
     }
 }
