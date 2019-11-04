@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 9a7cac90b80e4d44e8f6b5ea5882de8c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KoHo
+  fontNames:
+  - KoHo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3ad4d250b318b1d43a38668d0f12d718, type: 3}
+  - {fileID: 12800000, guid: 3fcf4c110488cfd44a10de493a9dd99e, type: 3}
+  - {fileID: 12800000, guid: 2f1e1fb4e7556e64491d1e7b07ddd5a4, type: 3}
+  - {fileID: 12800000, guid: 8c43b0ec4d943ae439a95766473b3a8d, type: 3}
+  - {fileID: 12800000, guid: 870fd59d8f3212248ba54a66a9a76a7a, type: 3}
+  - {fileID: 12800000, guid: 55b5e7dd536efb848bbcb629748c4815, type: 3}
+  - {fileID: 12800000, guid: 8df9262f0d572a140986614d2fae6af3, type: 3}
+  - {fileID: 12800000, guid: 66b9b0ffb3bab384087492c4dc572841, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

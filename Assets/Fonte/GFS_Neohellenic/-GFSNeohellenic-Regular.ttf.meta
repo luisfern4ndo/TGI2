@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 8fecfac5722fe8042a8e6e2c229f8d71
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GFS Neohellenic
+  fontNames:
+  - GFS Neohellenic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7b83c8d15be63a54693d9e1a49e1a8d9, type: 3}
+  - {fileID: 12800000, guid: 38e07f4961660bc42b0ecf705aca7760, type: 3}
+  - {fileID: 12800000, guid: adbb48bf674dfd24892a8431268583b2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
