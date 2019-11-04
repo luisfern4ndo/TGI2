@@ -75,6 +75,7 @@ public class PainelM8 : MonoBehaviour
     {
         painelM8.SetActive(false);
         painelQuestões.SetActive(true);
+        painelM8Ativo = false;
 
     }
 }

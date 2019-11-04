@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -277,11 +277,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Ap\xF3s o fim da era dos humanos, os rob\xF4s assumiram o controle e eram
     liderados por seu rei King01, por\xE9m o mesmo foi atingido pelo \xFAltimo ataque
-    humano, um v\xEDrus escrito atrav\xE9s da linguagem de programa\xE7\xE3o Python
+    humano, um v\xEDrus escrito atrav\xE9s da linguagem de programa\xE7\xE3o <b>Python</b>
     e que agora corrompeu o rei.\nS\xF3 voc\xEA tem a habilidade de aprender esta
     linguagem para destruir o v\xEDrus enquanto passa por todos os perigos para se
     aproximar do rei.\nUtilize os coment\xE1rios (frases precedidas pelo caractere
-    #) e os computadores para te ajudar na aprendizagem."
+    #) e os computadores para te ajudarem na aprendizagem."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_margin: {x: -249.08112, y: 0, z: -172.66626, w: 0}
   m_textInfo:
     textComponent: {fileID: 281411822}
-    characterCount: 486
+    characterCount: 488
     spriteCount: 0
     spaceCount: 82
     wordCount: 82
