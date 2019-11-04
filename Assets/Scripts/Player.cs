@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 [RequireComponent(typeof(Rigidbody2D))] // obrigatorio player ter rigidbody2d
@@ -15,8 +16,8 @@ public class Player : MonoBehaviour
     public GameObject cdConsole;
     public GameObject cd2Console;
     public GameObject ConsoleKey;
-    public Text TextLives;
-    public Text TextColecionaveis;
+    public TextMeshProUGUI TextLives;
+    public TextMeshProUGUI TextColecionaveis;
     public GameObject lastCheckpoint;
     public bool morto;
     public Transform myTransform;
