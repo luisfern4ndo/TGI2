@@ -50,14 +50,12 @@ public class Player : MonoBehaviour
 
     void configRB()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        
+        rb.Sleep();
+
     }
     void configPadrao()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.WakeUp();
-
     }
 
     void Update()

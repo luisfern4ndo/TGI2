@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.7998047, y: 26.7}
+  m_AnchoredPosition: {x: -4.7998047, y: 26.700195}
   m_SizeDelta: {x: 477.9, y: 149.4}
   m_Pivot: {x: 0.49999997, y: 0.57510597}
 --- !u!114 &17954495
@@ -2384,7 +2384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -48.199463}
+  m_AnchoredPosition: {x: 0, y: -48.19922}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149577602
@@ -4394,7 +4394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -48.199463}
+  m_AnchoredPosition: {x: 0, y: -48.19922}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254536030
@@ -6911,7 +6911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.700195, y: -113.3}
+  m_AnchoredPosition: {x: 61.700195, y: -113.299805}
   m_SizeDelta: {x: 360.13, y: 21.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436349516
@@ -7669,7 +7669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484917105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4226093, y: 1.7172, z: -10}
+  m_LocalPosition: {x: -5.52752, y: 1.7172, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 63475740}
@@ -8344,7 +8344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4226093, y: 1.7172, z: -10}
+  m_LocalPosition: {x: -5.52752, y: 1.7172, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18669,8 +18669,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 194, y: -43, z: 0}
     second:
-      m_TileIndex: 39
-      m_TileSpriteIndex: 39
+      m_TileIndex: 54
+      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -18678,8 +18678,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 195, y: -43, z: 0}
     second:
-      m_TileIndex: 39
-      m_TileSpriteIndex: 39
+      m_TileIndex: 15
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -35637,7 +35637,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 900ead2d55480cd4f97bb3b8dc5a6766, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 3ea8e4f37ba70944dbcddd743c273d16, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: fd579a86c1cd1714b9e7686e740d1255, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 737bb52b5fbf8074da08b0a172717c13, type: 2}
@@ -35685,7 +35685,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5b920d0dbffdce4449339d5109401bdb, type: 2}
   - m_RefCount: 178
     m_Data: {fileID: 11400000, guid: d57bcc81e010374459ffd5c8590062c7, type: 2}
-  - m_RefCount: 554
+  - m_RefCount: 552
     m_Data: {fileID: 11400000, guid: 95b62044b12ba50488f6b899eb470b9a, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 67feff71790f6d04997eeeeaa12c6641, type: 2}
@@ -35715,7 +35715,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 906dff7a5b6f7e54d9d01898f5e58b72, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 34546bc8f190c0041a51ed2d3ff0cb79, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: a121e389a7bc0d6449798721d7712c2d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 22af010ac26cb754295c3905413a9040, type: 2}
@@ -35799,7 +35799,7 @@ Tilemap:
     m_Data: {fileID: 21300008, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300002, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 21300010, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 21300006, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
@@ -35848,11 +35848,11 @@ Tilemap:
     m_Data: {fileID: 21300072, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
   - m_RefCount: 178
     m_Data: {fileID: 21300052, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
-  - m_RefCount: 554
+  - m_RefCount: 552
     m_Data: {fileID: 21300096, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 21300136, guid: d626112f3d05a834dab8c00afeb69a42, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 6200611681190544012, guid: 0cdc516903760af44b72d5aa665cb36f,
       type: 3}
   - m_RefCount: 5
@@ -36035,7 +36035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -71.000244}
+  m_AnchoredPosition: {x: 0, y: -71}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759177793
@@ -52646,7 +52646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.799805, y: -14.199707}
+  m_AnchoredPosition: {x: -50.79883, y: -14.199707}
   m_SizeDelta: {x: 158.66, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905312403
@@ -53890,11 +53890,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Uma <color=#FF8800>array</color> \xE9 uma variavel composta que armazena
-    uma cole\xE7\xE3o de elementos, dos quais voc\xEA pode identificar e acessar atrav\xE9s
-    de um indice, o primeiro elemento da array ter\xE1 o indice 0, o segundo 1 e por
-    ai vai.\n\nPara acessar um elemento dentro da array <b>itens</b>, identifique
-    o n\xFAmero do indice do elemento:"
+  m_text: "Uma <color=#FF8800>array</color> \xE9 uma <b>variavel composta</b> que
+    armazena uma cole\xE7\xE3o de elementos, dos quais voc\xEA pode identificar e
+    acessar atrav\xE9s de um indice, o primeiro elemento da array ter\xE1 o indice
+    0, o segundo 1 e por ai vai.\n\nPara acessar um elemento dentro da array <b>itens</b>,
+    identifique o n\xFAmero do indice do elemento:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -54804,12 +54804,10 @@ MonoBehaviour:
     isTrue: 1
   - fact: Textos possuem o tipo de dado str
     isTrue: 1
-  - fact: Uma Array pode ter mais de um elemento
+  - fact: Uma array pode ter mais de um elemento
     isTrue: 1
   - fact: Variaveis aceitam apenas textos
     isTrue: 0
-  - fact: "Em Python uma fun\xE7\xE3o sempre retorna um valor"
-    isTrue: 1
   - fact: "\xC9 necess\xE1rio aspas simples para definir uma variavel do tipo str"
     isTrue: 1
   - fact: O operador = testa igualdade de valores, enquanto == atribui um valor
@@ -54819,6 +54817,11 @@ MonoBehaviour:
   - fact: "//Isto \xE9 um coment\xE1rio em Python"
     isTrue: 0
   - fact: "if/else \xE9 uma estrutura de repeti\xE7\xE3o"
+    isTrue: 0
+  - fact: "Uma fun\xE7\xE3o \xE9 uma subrotina que executa uma tarefa espec\xEDfica
+      quando chamada"
+    isTrue: 1
+  - fact: "A instru\xE7\xE3o return \xE9 utilizada para sair de um la\xE7o de repeti\xE7\xE3o"
     isTrue: 0
   factText: {fileID: 1510155252}
   trueButton: {fileID: 1085214433}
@@ -55089,7 +55092,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
 --- !u!224 &1036127708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56845,7 +56848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -48.199463}
+  m_AnchoredPosition: {x: 0, y: -48.19922}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123657972
@@ -57896,7 +57899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -72.20044}
+  m_AnchoredPosition: {x: 0, y: -72.200195}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179233441
@@ -58273,7 +58276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 57.199707}
+  m_AnchoredPosition: {x: 0, y: 66.6001}
   m_SizeDelta: {x: 301.08, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203606581
@@ -58294,16 +58297,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Para comparar valores s\xE3o utilizados operadores, como por exemplo:\n<b>==</b>(Igual
+  m_text: "Para comparar valores s\xE3o utilizados <b>operadores</b>, como por exemplo:\n<b>==</b>(Igual
     a), <b><</b> (Menor que), <b>></b> (Maior que), <b>!</b> (Nega\xE7\xE3o), <b><=</b>
     (Menor ou igual) e etc.\n<color=#FF8800>if/else</color> \xE9 uma estrutura de
     condi\xE7\xE3o que permite avaliar uma express\xE3o e, de acordo com seu resultado,
-    executar uma determinada a\xE7\xE3o. A estrutura foi implementada a seguir:\n<i>if
+    executar uma determinada a\xE7\xE3o. A estrutura foi implementada a seguir:\n\n<i>if
     MovimentoPlataforma == True: <color=#858585>  #Se MovimentoPlataforma \xE9 verdadeiro</color>\n
     \   Laser = True                             <color=#858585>  #Laser recebe verdadeiro</color>\nelse:
     \                                             <color=#858585>  #Sen\xE3o</color>\n
     \   Laser = False                             <color=#858585> #Laser recebe falso</color></i>\n\nMovimentoPlataforma
-    =\n"
+    =                  <color=#858585> <i>#Voc\xEA pode alterar este valor</color></i>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -58372,12 +58375,12 @@ MonoBehaviour:
   m_margin: {x: 12.301978, y: 24.192337, z: -2.1945753, w: 0}
   m_textInfo:
     textComponent: {fileID: 1203606581}
-    characterCount: 615
+    characterCount: 664
     spriteCount: 0
-    spaceCount: 193
-    wordCount: 69
+    spaceCount: 217
+    wordCount: 74
     linkCount: 0
-    lineCount: 11
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -60006,7 +60009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.299805, y: -18.300293}
+  m_AnchoredPosition: {x: -30.298828, y: -18.300293}
   m_SizeDelta: {x: 44.215, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274853431
@@ -61533,11 +61536,12 @@ MonoBehaviour:
     neste momento ser\xE1 utilizado While.\nA estrutura executa a repeti\xE7\xE3o
     de um bloco de instru\xE7\xF5es enquanto uma condi\xE7\xE3o \xE9 verdadeira. Considerando
     uma array com as 4 plataformas, determine a condi\xE7\xE3o e execute o c\xF3digo:\n<i>i
-    = 0                                            <color=#858585>#i ser\xE1 utilizado
-    na condi\xE7\xE3o</color>\nWhile i <=                             :    <color=#858585>
-    #Enquanto i for menor ou igual a? Defina </color>\n    MovimentoPlataforma(i)
+    = 0                                            <color=#858585>#variavel que ser\xE1
+    utilizada na condi\xE7\xE3o</color>\nWhile i <=                             :
+    \   <color=#858585> #Enquanto i for menor ou igual a? Defina </color>\n    MovimentoPlataforma(i)
     = True\n<color=#858585>   #Atribui True para MovimentoPlataforma no indice i da
-    array</color>\n    i = i+1 <color=#858585>#Aumenta o valor de i a cada repeti\xE7\xE3o</color>\n"
+    array</color>\n    i = i+1 <color=#858585>#Aumenta o valor de i a cada repeti\xE7\xE3o
+    at\xE9 atingir a condi\xE7\xE3o</color>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -61606,10 +61610,10 @@ MonoBehaviour:
   m_margin: {x: -0.537499, y: 0.0013896432, z: 0.6829968, w: 0}
   m_textInfo:
     textComponent: {fileID: 1403835536}
-    characterCount: 720
+    characterCount: 754
     spriteCount: 0
-    spaceCount: 193
-    wordCount: 103
+    spaceCount: 198
+    wordCount: 108
     linkCount: 0
     lineCount: 11
     pageCount: 1
@@ -62844,7 +62848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.989258, y: -37.51001}
+  m_AnchoredPosition: {x: -41.990234, y: -37.299805}
   m_SizeDelta: {x: 39.4, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472204028
@@ -64060,9 +64064,9 @@ MonoBehaviour:
     implicitamente caso n\xE3o definido.\nA sintaxe de uma fun\xE7\xE3o \xE9 definida
     por tr\xEAs partes: nome, par\xE2metros e corpo. Exemplo:\n<i>def soma(a,b):  <color=#858585>#def
     \xE9 a defini\xE7\xE3o de uma fun\xE7\xE3o e soma o nome dado</color>\n<color=#858585>#(a,b)
-    s\xE3o os parametros de entrada</color>\n    resultado = a+b <color=#858585>#Realizando
-    a a\xE7\xE3o</color>\n    return resultado <color=#858585>#Retornando o resultado</i>\n\n#Aperte
-    X para fechar</color>"
+    s\xE3o os parametros de entrada</color>\n    resultado = a+b <color=#858585>#Atribuindo
+    o valor de a+b na variavel resultado</color>\n    return resultado <color=#858585>#instru\xE7\xE3o
+    que retornar\xE1 o valor </i>\n\n#Aperte X para fechar</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -64131,10 +64135,10 @@ MonoBehaviour:
   m_margin: {x: -0.6720231, y: 24.192337, z: 0.6829968, w: 0}
   m_textInfo:
     textComponent: {fileID: 1526606873}
-    characterCount: 498
+    characterCount: 538
     spriteCount: 0
-    spaceCount: 93
-    wordCount: 86
+    spaceCount: 101
+    wordCount: 94
     linkCount: 0
     lineCount: 11
     pageCount: 1
@@ -67533,7 +67537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -69.30005}
+  m_AnchoredPosition: {x: 0, y: -69.299805}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721156364
@@ -71914,7 +71918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36.799805, y: -27.600098}
+  m_AnchoredPosition: {x: -36.79883, y: -27.600098}
   m_SizeDelta: {x: 84.67, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007448734
@@ -72203,7 +72207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49.799805, y: -11.100098}
+  m_AnchoredPosition: {x: -49.79883, y: -11.100098}
   m_SizeDelta: {x: 45.9, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013159696
@@ -74040,7 +74044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83, y: -38.899994}
+  m_AnchoredPosition: {x: -83, y: -38.899963}
   m_SizeDelta: {x: 16.67, y: 18.861}
   m_Pivot: {x: 0.32697797, y: 0.24076079}
 --- !u!114 &2099315086
@@ -74840,7 +74844,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
 --- !u!224 &2128648701
 RectTransform:
   m_ObjectHideFlags: 0
