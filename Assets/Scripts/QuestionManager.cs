@@ -126,7 +126,7 @@ public class QuestionManager : MonoBehaviour
             panelQuestion1.SetActive(false);
             yield return new WaitForSeconds(2.2f);
             gamePlayer.GetComponent<Animator>().SetBool("gameover", true);
-            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>GAME OVER</b>\n Foi acertado " + qtdCorretas+ "/10 questões, o vírus ganhou esta batalha e os robos estão se destruindo, no final das contas os humanos não deixaram barato. Obrigado por jogar este beta!  Esperamos que tenha se divertido e aprendido algo \n\n<i>Luis Fernando de Góis Teixeira\nGuilherme Guimarães\nUniversidade Cruzeiro do Sul</i>";
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>GAME OVER</b>\n Foi acertado " + qtdCorretas+ "/10 questões, o vírus ganhou esta batalha e os robos estão se destruindo, no final das contas os humanos não deixaram barato. Obrigado por jogar este beta!  Esperamos que tenha se divertido e aprendido algo \n\n<i>Luis Fernando de Góis Teixeira\nGuilherme Guimarães\nJosivan Pereira da Silva\nUniversidade Cruzeiro do Sul</i>";
             yield return new WaitForSeconds(5f);
             panelFINAL.SetActive(true);
         }
@@ -134,7 +134,7 @@ public class QuestionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
-            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>MISSÃO CUMPRIDA!</b>\nVocê acertou " + qtdCorretas + "/10 questões, o virus foi derrotado e o reinado dos robôs poderá finalmente prosperar. Obrigado por ter jogado este beta! Esperamos que tenha se divertido e aprendido algo \n\n<i>Luis Fernando de Góis Teixeira\nGuilherme Guimarães\nUniversidade Cruzeiro do Sul</i>";
+            txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>MISSÃO CUMPRIDA!</b>\nVocê acertou " + qtdCorretas + "/10 questões, o virus foi derrotado e o reinado dos robôs poderá finalmente prosperar. Obrigado por ter jogado este beta! Esperamos que tenha se divertido e aprendido algo \n\n<i>Luis Fernando de Góis Teixeira\nJosivan Pereira da Silva\nGuilherme Guimarães\nUniversidade Cruzeiro do Sul</i>";
             yield return new WaitForSeconds(3f);
             gameBOSS.GetComponent<BossDerrota>().derrotado = true;
             yield return new WaitForSeconds(5f);

@@ -24,9 +24,11 @@ public class StringAtivar : MonoBehaviour
         {
             floatPai.GetComponent<LocalBoxAtivar>().bSTRINGAtivo = true;
             boxString.GetComponent<Animator>().SetBool("Ativado", true);
+            boxString.GetComponent<TargetJoint2D>().enabled = true;
         }
 
     }
+
     private void OnTriggerExit2D(Collider2D collision2d)
     {
 

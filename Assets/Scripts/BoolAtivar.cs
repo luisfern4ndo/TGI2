@@ -24,6 +24,7 @@ public class BoolAtivar : MonoBehaviour
         {
             floatPai.GetComponent<LocalBoxAtivar>().bBOOLAtivo = true;
             boxBOOL.GetComponent<Animator>().SetBool("Ativado", true);
+            boxBOOL.GetComponent<TargetJoint2D>().enabled = true;
         }
 
     }
@@ -38,3 +39,4 @@ public class BoolAtivar : MonoBehaviour
     }
 
 }
+

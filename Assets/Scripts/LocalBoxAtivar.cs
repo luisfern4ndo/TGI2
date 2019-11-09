@@ -49,18 +49,19 @@ public class LocalBoxAtivar : MonoBehaviour
         {
             bFLOATAtivo = true;
             caixaFLOAT.GetComponent<Animator>().SetBool("Ativado", true);
+            caixaFLOAT.GetComponent<TargetJoint2D>().enabled = true;
             
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision2d)
     {
-        if (collision.transform.tag == "boxFLOAT")
+
+        if (collision2d.gameObject.CompareTag("boxFLOAT"))
         {
             bFLOATAtivo = false;
-            caixaFLOAT.GetComponent<Animator>().SetBool("Ativado",false);
+            caixaFLOAT.GetComponent<Animator>().SetBool("Ativado", false);
         }
     }
-
     public void DestroyGameObject()
     {
         if (!destruido)

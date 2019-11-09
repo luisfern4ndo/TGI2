@@ -23,6 +23,7 @@ public class IntAtivar : MonoBehaviour
         {
             floatPai.GetComponent<LocalBoxAtivar>().bINTAtivo = true;
             boxINT.GetComponent<Animator>().SetBool("Ativado", true);
+            boxINT.GetComponent<TargetJoint2D>().enabled = true;
         }
 
     }

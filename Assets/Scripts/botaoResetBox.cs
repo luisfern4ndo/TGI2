@@ -53,6 +53,10 @@ public class botaoResetBox : MonoBehaviour
     public void RespawnBoxs()
     {
 
+        bINT.GetComponent<TargetJoint2D>().enabled = false;
+        bFLOAT.GetComponent<TargetJoint2D>().enabled = false;
+        bSTRING.GetComponent<TargetJoint2D>().enabled = false;
+        bBOOL.GetComponent<TargetJoint2D>().enabled = false;
         bINT.transform.position = GameObject.FindGameObjectWithTag("respINT").transform.position;
         bFLOAT.transform.position = GameObject.FindGameObjectWithTag("respFLOAT").transform.position;
         bSTRING.transform.position = GameObject.FindGameObjectWithTag("respSTRING").transform.position;
