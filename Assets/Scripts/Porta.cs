@@ -15,6 +15,7 @@ public class Porta : MonoBehaviour
     public GameObject ConsoleErro;
     public GameObject ConsoleInformativo;
     public GameObject ConsoleKey;
+    public AudioSource abrirSound;
 
 
     void Start()
@@ -61,6 +62,7 @@ public class Porta : MonoBehaviour
 
     IEnumerator destrancar()
     {
+        abrirSound.Play();
         yield return new WaitForSeconds(2f);
         desbloquear = true;
         GetComponent<Animator>().SetBool("Destrancada2", true);

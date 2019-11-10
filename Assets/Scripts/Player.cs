@@ -34,7 +34,8 @@ public class Player : MonoBehaviour
     public LayerMask whatIsGround;
     public float forcaPulo;
 
-
+    public AudioSource collectSound;
+    public AudioSource jumpSound;
 
     void Start()
     {
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.Space) && isGrounded2)
             {
                 rigidBody.AddForce(new Vector2(0, forcaPulo)); //altura
+                jumpSound.Play();
 
             }
 
@@ -120,12 +122,14 @@ public class Player : MonoBehaviour
             collision2d.gameObject.SetActive(false);
             colecionaveis++;
             TextColecionaveis.text = colecionaveis.ToString();
+            collectSound.Play();
         }
 
         if (collision2d.gameObject.CompareTag("Key"))
         {
             collision2d.gameObject.SetActive(false);
             ConsoleKey.SetActive(true);
+            collectSound.Play();
         }
 
         if (collision2d.transform.tag == "Hplataforma")
@@ -175,17 +179,20 @@ public class Player : MonoBehaviour
             collision2d.gameObject.SetActive(false);
             colecionaveis++;
             TextColecionaveis.text = colecionaveis.ToString();
+            collectSound.Play();
         }
 
         if (collision2d.gameObject.CompareTag("Cd"))
         {
             cdConsole.SetActive(true);
             cd++;
+            collectSound.Play();
         }
         if (collision2d.gameObject.CompareTag("Cd2"))
         {
             cd2Console.SetActive(true);
             cd++;
+            collectSound.Play();
         }
 
 
@@ -194,6 +201,7 @@ public class Player : MonoBehaviour
             Destroy(collision2d.gameObject);
             lives++;
             TextLives.text = lives.ToString();
+            collectSound.Play();
         }
 
         if (collision2d.gameObject.CompareTag("CheckOutros"))
