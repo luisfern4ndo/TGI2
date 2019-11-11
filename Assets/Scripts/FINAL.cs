@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FINAL : MonoBehaviour
 {
+    public GameObject painelDev;
     
     void Start()
     {
@@ -13,7 +14,25 @@ public class FINAL : MonoBehaviour
 
     IEnumerator Reiniciar()
     {
-        yield return new WaitForSeconds(35f);
+        yield return new WaitForSeconds(50f);
         SceneManager.LoadScene("Cena 1 Menu");
     }
+
+    public void chamarMenu()
+    {
+        SceneManager.LoadScene("Cena 1 Menu");
+    }
+
+    public void chamarDev()
+    {
+        if (painelDev.activeInHierarchy)
+        {
+            painelDev.SetActive(false);
+        }
+        else
+        {
+            painelDev.SetActive(true);
+        }
+    }
+
 }

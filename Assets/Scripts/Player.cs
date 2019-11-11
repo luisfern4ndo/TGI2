@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
         gameRespawnManager = FindObjectOfType<respawnPlayer>();
         MonitorAtivado = false;
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     void configRB()

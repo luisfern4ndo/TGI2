@@ -47,7 +47,7 @@ public class respawnPlayer : MonoBehaviour
     IEnumerator RestartGameOver()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Cena 3 Jogo");
+        SceneManager.LoadScene("Cena 1 Menu");
     }
 
 }

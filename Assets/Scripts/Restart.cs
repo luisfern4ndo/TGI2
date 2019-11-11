@@ -22,7 +22,7 @@ public class Restart : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene("Cena 2 Historia");
+        SceneManager.LoadScene("Cena 2 Jogo");
 
     }
 }

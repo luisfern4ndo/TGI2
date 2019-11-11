@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
@@ -43,5 +44,11 @@ public class Pause : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1;
 
+    }
+
+    public void chamarMenu()
+    {
+        SceneManager.LoadScene("Cena 1 Menu");
+        Time.timeScale = 1;
     }
 }
