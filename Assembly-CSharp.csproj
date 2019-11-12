@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PainelM4Ident.cs" />
     <Compile Include="Assets\Questions.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />

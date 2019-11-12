@@ -218,6 +218,9 @@ TextureImporter:
   - first:
       213: 21300142
     second: Inimigos - morte - canvas_71
+  - first:
+      213: 2038467562721934209
+    second: liv-key_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1809,6 +1812,27 @@ TextureImporter:
       bones: []
       spriteID: a8f78a8800cf1254c8e0430b14ff8433
       internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: liv-key_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 207
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56960bde21b80de408395dfe8d8ef5a6
+      internalID: 2038467562721934209
       vertices: []
       indices: 
       edges: []
