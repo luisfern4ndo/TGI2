@@ -36,7 +36,6 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0;
         GameObject.Find("ResumeButton").GetComponent<Button>().Select();
 
-
     }
     public void Continuar()
     {

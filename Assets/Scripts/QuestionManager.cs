@@ -134,6 +134,7 @@ public class QuestionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             panelQuestion1.SetActive(false);
+            yield return new WaitForSeconds(2.2f);
             txtFINAL.GetComponent<TextMeshProUGUI>().text = "<b>MISSÃO CUMPRIDA!</b>\nVocê acertou " + qtdCorretas + "/10 questões, o virus foi derrotado e o reinado dos robôs poderá finalmente prosperar. Obrigado por ter jogado este beta! Esperamos que tenha se divertido e aprendido algo";
             gameBOSS.GetComponent<BossDerrota>().derrotado = true;
             yield return new WaitForSeconds(5f);

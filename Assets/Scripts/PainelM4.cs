@@ -82,6 +82,7 @@ public class PainelM4 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
+        textoinput.ActivateInputField();
 
     }
     public void P4Continuar()
@@ -113,6 +114,7 @@ public class PainelM4 : MonoBehaviour
         {
             ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! O valor não existe no contexto atual";
             ConsoleERRO.SetActive(true);
+            ConsoleERRO.GetComponent<AudioSource>().Play();
 
         }
     }

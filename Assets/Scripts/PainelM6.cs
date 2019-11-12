@@ -83,6 +83,7 @@ public class PainelM6 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
+        textoinput.ActivateInputField();
 
     }
     public void P6Continuar()
@@ -128,9 +129,9 @@ public class PainelM6 : MonoBehaviour
             plataforma4.GetComponent<AtivarWhileMoveP>().ativar = true;
         }
         else{
-            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! Esta array não possui um indice " + texto;
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! Não existe um elemento em MovimentoPlataforma(" +texto+")";
             ConsoleERRO.SetActive(true);
-
+            ConsoleERRO.GetComponent<AudioSource>().Play();
         }
     }
 

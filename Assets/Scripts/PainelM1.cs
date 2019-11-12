@@ -100,6 +100,7 @@ public class PainelM1 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoInput.Select();
+        textoInput.ActivateInputField();
 
     }
     public void P1Continuar()

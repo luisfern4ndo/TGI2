@@ -67,6 +67,10 @@ public class btM7funcao : MonoBehaviour
             consoleCD2.SetActive(false);
             consoleBtInfo.GetComponent<TextMeshProUGUI>().text = "Função gerarChave(Cd1, Cd2) chamada com sucesso";
             consoleBtInfo.SetActive(true);
+            if (ConsoleErro.activeInHierarchy)
+            {
+                ConsoleErro.SetActive(false);
+            }
 
         }
         else
@@ -74,7 +78,7 @@ public class btM7funcao : MonoBehaviour
             
                 ConsoleErro.GetComponent<TextMeshProUGUI>().text = "Esta função precisa de 2 valores de entrada";
                 ConsoleErro.SetActive(true);
-                
+                ConsoleErro.GetComponent<AudioSource>().Play();
             
         }
     }

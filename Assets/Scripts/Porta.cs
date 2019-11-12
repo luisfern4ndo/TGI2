@@ -47,6 +47,10 @@ public class Porta : MonoBehaviour
                 ConsoleKey.SetActive(false);
 
                 StartCoroutine(destrancar());
+                if (ConsoleErro.activeInHierarchy)
+                {
+                    ConsoleErro.SetActive(false);
+                }
                 
             }
             else
@@ -54,6 +58,7 @@ public class Porta : MonoBehaviour
                 if (ConsoleInformativo.activeInHierarchy == false) {
                     ConsoleErro.GetComponent<TextMeshProUGUI>().text = "A porta está trancada, você precisa de uma chave";
                     ConsoleErro.SetActive(true);
+                    ConsoleErro.GetComponent<AudioSource>().Play();
                 }
             }
         }

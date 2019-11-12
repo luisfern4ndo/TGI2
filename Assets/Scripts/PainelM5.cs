@@ -25,6 +25,7 @@ public class PainelM5 : MonoBehaviour
 
     public Text aperteX;
     public GameObject ConsoleERRO;
+    public GameObject ConsoleInformativo;
 
     void Start()
     {
@@ -86,6 +87,7 @@ public class PainelM5 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
+        textoinput.ActivateInputField();
 
     }
     public void P5Continuar()
@@ -130,9 +132,13 @@ public class PainelM5 : MonoBehaviour
         }
         else
         {
-            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "Não existe um elemento no indice "+ texto;
+            ConsoleERRO.GetComponent<TextMeshProUGUI>().text = "ERRO! Não existe um indice "+ texto +" na array itens";
             ConsoleERRO.SetActive(true);
-
+            ConsoleERRO.GetComponent<AudioSource>().Play();
+            if (ConsoleInformativo.activeInHierarchy)
+            {
+                ConsoleInformativo.SetActive(false);
+            }
         }
     }
 
