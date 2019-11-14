@@ -24,6 +24,8 @@ public class PainelM1 : MonoBehaviour
     public GameObject ConsoleInformativo;
     public bool LaserDestruido;
 
+    public AudioSource xclique;
+
 
     void Start()
     {
@@ -93,6 +95,7 @@ public class PainelM1 : MonoBehaviour
 
     public void ativarP1()
     {
+        xclique.Play();
         painelM1.SetActive(true);
         painelM1Ativo = true;
         Smute.GetComponent<mute>().MonitorAtivado = true;
@@ -105,6 +108,7 @@ public class PainelM1 : MonoBehaviour
     }
     public void P1Continuar()
     {
+        
         painelM1.SetActive(false);
         painelM1Ativo = false;
         Smute.GetComponent<mute>().MonitorAtivado = false;

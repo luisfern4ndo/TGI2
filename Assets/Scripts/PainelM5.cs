@@ -11,7 +11,7 @@ public class PainelM5 : MonoBehaviour
     public bool painelM5Ativo;
     public string texto;
     public TMP_InputField textoinput;
-
+    public AudioSource xClique;
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
@@ -88,7 +88,7 @@ public class PainelM5 : MonoBehaviour
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
         textoinput.ActivateInputField();
-
+        xClique.Play();
     }
     public void P5Continuar()
     {
@@ -98,7 +98,7 @@ public class PainelM5 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
-
+        xClique.Play();
     }
 
 

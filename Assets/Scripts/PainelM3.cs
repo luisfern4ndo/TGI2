@@ -15,7 +15,7 @@ public class PainelM3 : MonoBehaviour
     public GameObject CanvasPauseRestart;
     public GameObject Player;
 
-
+    public AudioSource xClique;
     public Text aperteX;
     public GameObject ConsoleERRO;
 
@@ -81,7 +81,7 @@ public class PainelM3 : MonoBehaviour
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
         textoinput.ActivateInputField();
-
+        xClique.Play();
     }
     public void P3Continuar()
     {
@@ -91,7 +91,7 @@ public class PainelM3 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
-
+        xClique.Play();
     }
 
 

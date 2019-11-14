@@ -14,6 +14,7 @@ public class PainelM8 : MonoBehaviour
     public GameObject CanvasPauseRestart;
     public GameObject Player;
     public GameObject painelQuestões;
+    public AudioSource xClique;
 
     void Start()
     {
@@ -69,6 +70,7 @@ public class PainelM8 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
         GameObject.Find("btIniciarQuest").GetComponent<Button>().Select();
+        xClique.Play();
 
     }
     public void chamarQuest()

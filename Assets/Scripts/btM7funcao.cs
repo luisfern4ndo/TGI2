@@ -16,6 +16,7 @@ public class btM7funcao : MonoBehaviour
     public GameObject consoleCD1;
     public GameObject consoleCD2;
     public GameObject consoleBtInfo;
+    public AudioSource audioBt;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class btM7funcao : MonoBehaviour
     {
         if(cds == 2)
         {
+            audioBt.Play();
             Key.SetActive(true);
             Player.GetComponent<Player>().cd = 0;
             consoleCD1.SetActive(false);

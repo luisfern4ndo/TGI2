@@ -12,6 +12,7 @@ public class botaoResetBox : MonoBehaviour
     public GameObject bBOOL;
     public GameObject bSTRING;
     public GameObject ConsoleReset;
+    public AudioSource audioBt;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class botaoResetBox : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && colidPlayer)
         {
             RespawnBoxs();
+            audioBt.Play();
             aperteX.enabled = false;
 
         }

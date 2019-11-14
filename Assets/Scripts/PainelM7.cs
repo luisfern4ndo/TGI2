@@ -14,6 +14,7 @@ public class PainelM7 : MonoBehaviour
     public GameObject Smute;
     public GameObject CanvasPauseRestart;
     public GameObject Player;
+    public AudioSource xClique;
 
 
     void Start()
@@ -69,6 +70,7 @@ public class PainelM7 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = true;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = true;
         Player.GetComponent<Player>().MonitorAtivado = true;
+        xClique.Play();
 
     }
     public void P7Continuar()
@@ -79,6 +81,6 @@ public class PainelM7 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
-
+        xClique.Play();
     }
 }

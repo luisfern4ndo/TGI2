@@ -18,7 +18,7 @@ public class PainelM6 : MonoBehaviour
     public GameObject plataforma2;
     public GameObject plataforma3;
     public GameObject plataforma4;
-
+    public AudioSource xClique;
     public Text aperteX;
     public GameObject ConsoleERRO;
 
@@ -84,7 +84,7 @@ public class PainelM6 : MonoBehaviour
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
         textoinput.ActivateInputField();
-
+        xClique.Play();
     }
     public void P6Continuar()
     {
@@ -94,7 +94,7 @@ public class PainelM6 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
-
+        xClique.Play();
     }
 
 

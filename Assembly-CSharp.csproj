@@ -62,12 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PainelM4Ident.cs" />
     <Compile Include="Assets\Questions.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP.cs" />
     <Compile Include="Assets\Scripts\AtivarMoveP2.cs" />
     <Compile Include="Assets\Scripts\AtivarWhileMoveP.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\AudioProximity.cs" />
     <Compile Include="Assets\Scripts\BoolAtivar.cs" />
     <Compile Include="Assets\Scripts\BossDerrota.cs" />
     <Compile Include="Assets\Scripts\botaoResetBox.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\PainelM6.cs" />
     <Compile Include="Assets\Scripts\PainelM7.cs" />
     <Compile Include="Assets\Scripts\PainelM8.cs" />
+    <Compile Include="Assets\Scripts\PainelM9.cs" />
     <Compile Include="Assets\Scripts\panelDev.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -122,6 +123,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Fonte\Novas\Raleway\OFL.txt" />
     <None Include="Assets\Fonte\GFS_Neohellenic\OFL.txt" />
     <None Include="Assets\Fonte\Flamenco\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -129,6 +131,7 @@
     <None Include="Assets\Fonte\Fira_Mono\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+    <None Include="Assets\Fonte\Novas\Abel\OFL.txt" />
     <None Include="Assets\Fonte\IBM_Plex_Mono\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Fonte\OFL.txt" />
@@ -136,6 +139,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Fonte\Novas\Rajdhani\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Fonte\KoHo\OFL.txt" />
@@ -148,6 +152,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Fonte\Novas\Barlow_Condensed\OFL.txt" />
     <None Include="Assets\Fonte\Chilanka\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/luis-/OneDrive/Imagens/tcc/TGI2/TGI2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

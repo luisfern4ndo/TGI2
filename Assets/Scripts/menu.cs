@@ -15,6 +15,12 @@ public class menu : MonoBehaviour
 
     public void chamaHistoria()
     {
+        StartCoroutine(delayHistoria());
+    }
+
+    IEnumerator delayHistoria()
+    {
+        yield return new WaitForSeconds(0.3f);
         painelMenu.SetActive(false);
         luz.SetActive(false);
         NPCbom.SetActive(false);
@@ -25,10 +31,22 @@ public class menu : MonoBehaviour
 
     public void chamaCena()
     {
+        StartCoroutine(delayCena());
+    }
+
+    IEnumerator delayCena()
+    {
+        yield return new WaitForSeconds(0.3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Cena 2 Jogo");
     }
-    public void sairJogo()
+        public void sairJogo()
     {
+        StartCoroutine(delaySair());
+    }
+
+    IEnumerator delaySair()
+    {
+        yield return new WaitForSeconds(0.2f);
         Application.Quit();
     }
 }

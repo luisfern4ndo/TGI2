@@ -15,7 +15,7 @@ public class PainelM4 : MonoBehaviour
     public GameObject CanvasPauseRestart;
     public GameObject Player;
     public GameObject Laser;
-
+    public AudioSource xClique;
 
     public Text aperteX;
     public GameObject ConsoleERRO;
@@ -83,7 +83,7 @@ public class PainelM4 : MonoBehaviour
         Player.GetComponent<Player>().MonitorAtivado = true;
         textoinput.Select();
         textoinput.ActivateInputField();
-
+        xClique.Play();
     }
     public void P4Continuar()
     {
@@ -93,7 +93,7 @@ public class PainelM4 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Pause>().MonitorAtivado = false;
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
-
+        xClique.Play();
     }
 
 
