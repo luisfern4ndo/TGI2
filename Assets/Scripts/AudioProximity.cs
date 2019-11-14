@@ -7,8 +7,9 @@ public class AudioProximity : MonoBehaviour
 {
     public Transform target;
     public AudioSource sound;
-    public float distance = 0.2f;
+    public float distance = 0.3f;
     public float volume = 0.03f;
+    public float distanceNotPlay = 5f;
 
 
     void Start()
@@ -25,28 +26,27 @@ public class AudioProximity : MonoBehaviour
 
         while (true)
         {
-            float distanceToTarget = Vector3.Distance(transform.position, target.position);
-
+            
             if (sound.isPlaying)
             {
-               // if (distanceToTarget > 4.5f)
-              //  {
-                //    sound.volume = 0f;
-               // }
-              //  else
-               // {
+                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                if (distanceToTarget > distanceNotPlay)
+                 {
+                    sound.volume = 0f;
+                 }
+                  else
+                  {
                     if (distanceToTarget < distance)
-                    {
+                     {
                         distanceToTarget = distance;
-
-                    }
+                     }
 
 
                     sound.volume = volume / distanceToTarget;
 
-                    yield return new WaitForSeconds(0.5f);
-
-               // }
+                   
+                  }
+                yield return new WaitForSeconds(0.5f);
             }
             
         }
