@@ -116,6 +116,7 @@ public class PainelM1 : MonoBehaviour
         CanvasPauseRestart.GetComponent<Restart>().MonitorAtivado = false;
         Player.GetComponent<Player>().MonitorAtivado = false;
 
+
     }
 
     public void DestroyGameObject()
@@ -128,6 +129,10 @@ public class PainelM1 : MonoBehaviour
             LaserDestruido = true;
             ConsoleInformativo.GetComponent<TextMeshProUGUI>().text = "O laser foi desativado!";
             ConsoleInformativo.SetActive(true);
+        }
+        else
+        {
+            xclique.Play();
         }
 
     }

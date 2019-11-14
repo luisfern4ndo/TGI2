@@ -50,4 +50,9 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene("Cena 1 Menu");
         Time.timeScale = 1;
     }
+
+    public void sairJogo()
+    {
+        Application.Quit();
+    }
 }

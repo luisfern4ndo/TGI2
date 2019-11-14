@@ -14,6 +14,7 @@ public class Porta : MonoBehaviour
     public bool desbloquear;
     public GameObject ConsoleErro;
     public GameObject ConsoleInformativo;
+    public GameObject XInformativo;
     public GameObject ConsoleKey;
     public AudioSource abrirSound;
 
@@ -50,6 +51,10 @@ public class Porta : MonoBehaviour
                 if (ConsoleErro.activeInHierarchy)
                 {
                     ConsoleErro.SetActive(false);
+                }
+                else if (XInformativo.activeInHierarchy)
+                {
+                    XInformativo.SetActive(false);
                 }
                 
             }

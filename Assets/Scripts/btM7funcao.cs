@@ -16,6 +16,7 @@ public class btM7funcao : MonoBehaviour
     public GameObject consoleCD1;
     public GameObject consoleCD2;
     public GameObject consoleBtInfo;
+    public GameObject consolePorta;
     public AudioSource audioBt;
 
     void Start()
@@ -77,7 +78,10 @@ public class btM7funcao : MonoBehaviour
         }
         else
         {
-            
+            if (consolePorta.activeInHierarchy)
+            {
+                consolePorta.SetActive(false);
+            }
                 ConsoleErro.GetComponent<TextMeshProUGUI>().text = "Esta função precisa de 2 valores de entrada";
                 ConsoleErro.SetActive(true);
                 ConsoleErro.GetComponent<AudioSource>().Play();

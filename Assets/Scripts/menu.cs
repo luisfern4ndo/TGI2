@@ -39,7 +39,9 @@ public class menu : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Cena 2 Jogo");
     }
-        public void sairJogo()
+
+
+    public void sairJogo()
     {
         StartCoroutine(delaySair());
     }
