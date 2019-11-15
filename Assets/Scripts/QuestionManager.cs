@@ -43,6 +43,8 @@ public class QuestionManager : MonoBehaviour
     public int contQuestions = 0;
     public int qtdCorretas = 0;
 
+    public AudioSource correctAnswerSound;
+    public AudioSource wrongAnswerSound;
 
     void Start()
     {
@@ -150,7 +152,11 @@ public class QuestionManager : MonoBehaviour
             if (currentQuestion.isTrue)
         {
             qtdCorretas++;
-
+            correctAnswerSound.Play();
+        }
+        else
+        {
+            wrongAnswerSound.Play();
         }
         trueButton.GetComponent<Button>().enabled = false;
         falseButton.GetComponent<Button>().enabled = false;
@@ -165,7 +171,11 @@ public class QuestionManager : MonoBehaviour
 
             if (!currentQuestion.isTrue)
             {
-                qtdCorretas++;
+                qtdCorretas++;correctAnswerSound.Play();
+            }
+            else
+            {
+                wrongAnswerSound.Play();
             }
 
         trueButton.GetComponent<Button>().enabled = false;

@@ -20,8 +20,15 @@ public class FINAL : MonoBehaviour
 
     public void chamarMenu()
     {
+        StartCoroutine(menu());
+    }
+
+    IEnumerator menu()
+    {
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene("Cena 1 Menu");
     }
+
 
     public void chamarDev()
     {
