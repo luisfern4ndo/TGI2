@@ -17759,7 +17759,7 @@ MonoBehaviour:
     requer padroniza\xE7\xE3o, j\xE1 que n\xE3o existem simbolos que delimitem blocos
     de c\xF3digos. Ela exerce um papel que vai al\xE9m do visual e de facilitar a
     leitura, a mudan\xE7a na identa\xE7\xE3o define a hierarquia entre os blocos.
-    Identar \xE9 o recuo do texto em rela\xE7\xE3o a sua margem, por exemplo:\n<i><color=#FF8800>if
+    Indentar \xE9 o recuo do texto em rela\xE7\xE3o a sua margem, por exemplo:\n<i><color=#FF8800>if
     i==1:\r </color>   <color=#858585>             #Primeiro nivel hierarquico</color>\n
     \   <color=#FF8800>print a</color>   <color=#858585>#Segundo nivel hierarquico,
     pertence ao bloco do if</color></i>\n\n<color=#858585>#Aperte X para fechar"
@@ -24323,7 +24323,7 @@ MonoBehaviour:
     isTrue: 0
   - fact: "if/else \xE9 uma estrutura de condi\xE7\xE3o"
     isTrue: 1
-  - fact: "A identa\xE7\xE3o do c\xF3digo \xE9 obrigat\xF3ria em Python"
+  - fact: "A indenta\xE7\xE3o do c\xF3digo \xE9 obrigat\xF3ria em Python"
     isTrue: 1
   - fact: Uma array pode ter mais de um elemento
     isTrue: 1
@@ -25862,7 +25862,7 @@ GameObject:
   - component: {fileID: 1081097376}
   - component: {fileID: 1081097375}
   m_Layer: 0
-  m_Name: "Monitor9 Identa\xE7\xE3o"
+  m_Name: "Monitor9 Indenta\xE7\xE3o"
   m_TagString: Monitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
